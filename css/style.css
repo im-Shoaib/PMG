@@ -507,69 +507,115 @@ section[id] {
 }
 
 /* Action Buttons */
+/* ---------- Action Buttons (Glossy Style) ---------- */
 .sec1-action-buttons {
   display: flex;
   flex-direction: row;
-  gap: 16px;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 20px;
 }
 
-.sec1-btn-red {
-  background: linear-gradient(180deg, #C1291F 0%, #5B130F 100%);
-  color: white;
-  font-family: 'Noto Sans JP', sans-serif;
-  font-weight: 600;
-  font-size: 18px;
-  padding: 14px 24px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  flex: 1;
-  white-space: nowrap;
-  transition: opacity 0.2s;
-}
-
-.sec1-btn-red:hover {
-  opacity: 0.9;
-}
-
+/* Shared Button Base Styles */
+.sec1-btn-red,
 .sec1-btn-green {
-  background: linear-gradient(180deg, #2E7D32 0%, #1B5E20 100%);
-  color: white;
-  font-family: 'Noto Sans JP', sans-serif;
-  border: none;
-  border-radius: 8px;
-  padding: 10px 16px;
-  flex: 1;
+  position: relative;
+  overflow: hidden;
+  border: 3px solid #FDFDFD;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  gap: 4px;
+  text-align: center;
   cursor: pointer;
-  transition: opacity 0.2s;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  flex: 1;
+  padding: 6px 0px;
 }
 
+/* Glossy "Glass" Overlay (shared) */
+.sec1-btn-red::before,
+.sec1-btn-green::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: #D9D9D926; /* Semi-transparent white highlight */
+  border-bottom-left-radius: 14% 80%;
+  border-bottom-right-radius: 14% 80%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Ensure text is above overlay */
+.sec1-btn-red span,
+.sec1-btn-green span,
+.sec1-btn-red .sec1-phone-number,
+.sec1-btn-green .sec1-phone-number,
+.sec1-btn-red .sec1-phone-label,
+.sec1-btn-green .sec1-phone-label,
+.sec1-btn-red .sec1-phone-subtext,
+.sec1-btn-green .sec1-phone-subtext,
+.sec1-btn-red i,
+.sec1-btn-green i {
+  position: relative;
+  z-index: 2;
+}
+
+/* Hover effect */
+.sec1-btn-red:hover,
 .sec1-btn-green:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Red Button Specific */
+.sec1-btn-red {
+  background: linear-gradient(180deg, #C1291F 0%, #5B130F 100%);
+  color: #FFFFFF;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.3;
+}
+
+/* Green Button Specific */
+.sec1-btn-green {
+  background: linear-gradient(180deg, #34A853 0%, #1A5028 100%);
+  color: #FFFFFF;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* Green Button Inner Text Styles */
+.sec1-btn-green .sec1-phone-label {
+  font-weight: 700;
+  font-size: 18px;
+  
+}
+
+.sec1-btn-green .sec1-phone-number {
+  
+  font-size: 20px;
+  
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sec1-btn-green .sec1-phone-subtext {
+  font-weight: 400;
+  font-size: 10px;
   opacity: 0.9;
 }
 
-.sec1-phone-icon {
-  font-size: 18px;
-}
-
-.sec1-phone-label {
-  font-size: 12px;
-  font-weight: 500;
-}
-
-.sec1-phone-number {
-  font-size: 18px;
-  font-weight: 800;
-  letter-spacing: -0.3px;
-}
-
-.sec1-phone-subtext {
-  font-size: 9px;
-  opacity: 0.9;
+/* Adjust existing red button text size if needed */
+.sec1-btn-red {
+  font-size: 24px;
+  line-height: 1.3;
 }
 
 /* ---------- Right Column: Form Area ---------- */
@@ -705,6 +751,21 @@ section[id] {
   text-decoration: underline;
 }
 
+/* Speech-bubble triangle for the floating form label */
+
+
+.sec1-floating-label::after {
+  content: "";
+  position: absolute;
+  top: 90%;
+  left: 20px;
+  width: 16px;
+  height: 16px;
+  background: #5B130F;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%);
+  border-radius: 0 0 4px 6px;
+}
+
 /* ---------- Mobile View (max-width: 768px) ---------- */
 @media (max-width: 768px) {
   .sec1-container {
@@ -712,85 +773,80 @@ section[id] {
     padding: 40px 1.5rem;
     gap: 48px;
   }
-  
+
   /* Text alignment changes */
   .sec1-tagline {
     display: block;
     font-size: 16px;
     line-height: 1.3;
   }
-  
-  .sec1-main-heading {
-    font-size: 36px;
-    line-height: 1.3;
-  }
-  
-  /* Dynamic Text Swap: 最短30分 → 最短2時間 */
+
   .sec1-main-heading {
     font-size: 24px;
+    line-height: 1.3;
+    white-space: normal;
   }
   .sec1-main-heading br {
     display: none;
   }
-  .sec1-main-heading {
-    white-space: normal;
-  }
-  /* Override via JS for exact text change */
-  
-  .sec1-coins {
-    
-  }
-  
+
   .sec1-coin-img {
     width: 30%;
   }
-  
+
   .sec1-legal-text {
     text-align: center;
     font-size: 10px;
   }
-  
+
   .sec1-description {
     font-size: 16px;
     text-align: center;
   }
-  
+
   .sec1-checklist {
     grid-template-columns: 1fr;
     gap: 10px;
   }
-  
+
   .sec1-check-item {
     font-size: 13px;
     padding: 10px 12px;
   }
-  
+
+  /* Action Buttons - Stack vertically, equal full width */
   .sec1-action-buttons {
-    flex-direction: row;
-    gap: 12px;
+    flex-direction: column;
+    gap: 16px;
   }
-  
+
   .sec1-btn-red,
   .sec1-btn-green {
-    flex: 1;
-    font-size: 12px;
-    padding: 10px 8px;
+    width: 100%;
+    flex: none;
+    padding: 18px 16px;
     white-space: normal;
     text-align: center;
+    border-width: 2px;
   }
-  
-  .sec1-btn-green {
-    padding: 8px 8px;
+
+  /* Red button font size */
+  .sec1-btn-red {
+    font-size: 20px;
+    padding: 40px 0px;
   }
-  
-  .sec1-phone-number {
-    font-size: 14px;
+
+  /* Green button inner styles */
+  .sec1-btn-green .sec1-phone-label {
+    font-size: 16px;
   }
-  
-  .sec1-phone-subtext {
-    font-size: 8px;
+  .sec1-btn-green .sec1-phone-number {
+    font-size: 22px;
   }
-  
+  .sec1-btn-green .sec1-phone-subtext {
+    font-size: 11px;
+  }
+
   /* Form Changes */
   .sec1-floating-label {
     font-size: 12px;
@@ -798,20 +854,20 @@ section[id] {
     left: 16px;
     padding: 6px 18px;
   }
-  
+
   .sec1-form-title {
     font-size: 18px;
   }
-  
+
   .sec1-row-fields {
     flex-direction: column;
     gap: 0;
   }
-  
+
   .sec1-half {
     width: 100%;
   }
-  
+
   .sec1-submit-btn {
     font-size: 16px;
     padding: 12px;
@@ -1526,7 +1582,6 @@ section[id] {
 }
 
 .sec5-header-text {
-  flex: 1;
   text-align: center;
 }
 
@@ -2398,23 +2453,26 @@ section[id] {
   padding: 14px 12px;
   text-align: center;
   vertical-align: middle;
+  background-color: #FFFFFF;
 }
 
+/* Header cells (except PMG column) - dark maroon background */
 .sec7-comparison-table th {
-  background-color: #721A15;
+  background-color: #631B18;
   color: #FFFFFF;
   font-weight: 700;
   font-size: 14px;
 }
 
+/* Top-left empty cell */
 .sec7-corner-cell {
-  background-color: #721A15;
+  background-color: #631B18;
   border: 1px solid #EAEAEA;
 }
 
-/* PMG Header Column */
+/* PMG Header Column - pinkish background + gold border */
 .sec7-pmg-col-header {
-  background-color: #FFFFFF !important;
+  background-color: #FFF5F5 !important;
   color: var(--main, #C1291F) !important;
   border-left: 2px solid #C49A45;
   border-right: 2px solid #C49A45;
@@ -2422,10 +2480,9 @@ section[id] {
   z-index: 2;
   box-shadow: 0px 4px 15px rgba(196, 154, 69, 0.3);
 }
-
-/* PMG Data Cells */
+/* PMG Data Cells - pinkish background + gold border */
 .sec7-pmg-cell {
-  background-color: #FFFFFF;
+  background-color: #FFF5F5 !important;
   color: var(--main, #C1291F);
   font-weight: 700;
   border-left: 2px solid #C49A45;
@@ -2435,14 +2492,28 @@ section[id] {
   box-shadow: 0px 4px 15px rgba(196, 154, 69, 0.3);
 }
 
-/* Row Labels (first column) */
+/* PMG Header Column - pinkish background + gradient border */
+.sec7-pmg-col-header,
+.sec7-pmg-cell {
+  background-color: #FFF5F5 !important;
+  color: var(--main, #C1291F) !important;
+  border-left: 3px solid;
+  border-right: 3px solid;
+  border-image-source: linear-gradient(180deg, #F9FAEB 0%, #FAE9B7 100%);
+  border-image-slice: 1;
+  border-image-repeat: stretch;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0px 4px 15px rgba(196, 154, 69, 0.3);
+}
+
+/* Row Labels (first column) - sticky for mobile */
 .sec7-row-label {
   background-color: #F9F9F9;
   font-weight: 600;
   text-align: left;
-  position: sticky;
+  position: static;
   left: 0;
-  background-color: #F9F9F9;
   z-index: 5;
 }
 
@@ -2455,26 +2526,38 @@ section[id] {
   opacity: 0.9;
 }
 
-/* Icon/Text colors for comparison columns */
-.sec7-comparison-table td:nth-child(3) {
-  color: #C1291F;
-  font-weight: 500;
+/* Icon container - vertical layout */
+.cell-icon {
+  display: block;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  line-height: 1;
 }
 
-.sec7-comparison-table td:nth-child(4) {
-  color: #4A6FA5;
-  font-weight: 500;
+.cell-text {
+  display: block;
+  font-size: 12px;
+  line-height: 1.3;
 }
 
-.sec7-comparison-table td:nth-child(5) {
-  color: #2E7D32;
-  font-weight: 500;
+/* Icon colours */
+.icon-red-double { color: #C1291F; }      /* ◎ */
+.icon-green-single { color: #34A853; }    /* ◯ */
+.icon-yellow-triangle { color: #FBBC05; } /* △ */
+.icon-blue-cross { color: #155592; }      /* ✕ */
+
+/* For PMG column, override all icons to red (double circle) and text red */
+.sec7-pmg-cell .cell-icon {
+  color: #C1291F !important;
+}
+.sec7-pmg-cell .cell-text {
+  color: #C1291F !important;
 }
 
-/* Special handling for PMG column overrides */
-.sec7-pmg-cell {
-  color: var(--main, #C1291F) !important;
-  font-weight: 700 !important;
+/* Ensure competitor columns have proper text color */
+.sec7-comparison-table td:not(.sec7-pmg-cell):not(.sec7-row-label) .cell-text {
+  color: #333333;
 }
 
 /* ----- Mobile Layout (max-width: 768px) ----- */
@@ -2521,7 +2604,7 @@ section[id] {
     font-size: 15px;
   }
   
-  /* Table container already has overflow-x: auto - works on mobile */
+  /* Make table cells slightly smaller on mobile */
   .sec7-comparison-table th,
   .sec7-comparison-table td {
     padding: 10px 8px;
@@ -2544,7 +2627,7 @@ section[id] {
   }
 }
 
-/* Tablet adjustments */
+/* Tablet adjustments (769px - 1024px) */
 @media (min-width: 769px) and (max-width: 1024px) {
   .sec7-container {
     max-width: 95%;
@@ -3153,7 +3236,6 @@ section[id] {
 }
 
 .sec11-header-text {
-  flex: 1;
   text-align: center;
 }
 
@@ -4977,50 +5059,76 @@ section[id] {
   flex-wrap: wrap;
 }
 
-/* Button Common Styles */
+/* Shared Button Base Styles (matching hero section) */
 .sec18-btn {
-  width: 100%;
-  max-width: 380px;
-  border: 2px solid #FFFFFF;
-  border-radius: 8px;
-  color: #FFFFFF;
+  position: relative;
+  overflow: hidden;
+  border: 3px solid #FDFDFD;
+  border-radius: 12px;
   padding: 24px 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  width: 100%;
+  max-width: 380px;
   font-family: 'Noto Sans JP', sans-serif;
-  /* Inner shadow / glassy highlight effect */
-  box-shadow: inset 0px 20px 30px -10px rgba(255, 255, 255, 0.25), 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
+/* Glossy "Glass" Overlay (shared) */
+.sec18-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: #D9D9D926;
+  border-bottom-left-radius: 14% 80%;
+  border-bottom-right-radius: 14% 80%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Ensure text is above overlay */
+.sec18-btn span,
+.sec18-btn .sec18-phone-number {
+  position: relative;
+  z-index: 2;
+}
+
+/* Hover effect */
 .sec18-btn:hover {
   transform: translateY(-3px);
-  box-shadow: inset 0px 20px 30px -10px rgba(255, 255, 255, 0.3), 0 8px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.25);
 }
 
-/* Left Button (Red/Form) */
+/* Left Button (Red) – updated gradient to match hero */
 .sec18-btn-red {
-  background: linear-gradient(180deg, #7A1A14 0%, #4A0E0B 100%);
+  background: linear-gradient(180deg, #C1291F 0%, #5B130F 100%);
+  color: #FFFFFF;
 }
 
-/* Right Button (Green/Phone) */
+/* Right Button (Green) – updated gradient to match hero */
 .sec18-btn-green {
-  background: linear-gradient(180deg, #43A047 0%, #1B5E20 100%);
+  background: linear-gradient(180deg, #34A853 0%, #1A5028 100%);
+  color: #FFFFFF;
 }
 
 /* Button Text Styles */
 .sec18-btn-top {
   font-weight: 700;
   font-size: 18px;
-  margin-bottom: 4px;
+  margin-bottom: 8px;
 }
 
 .sec18-btn-bottom {
   font-weight: 400;
-  font-size: 12px;
+  font-size: 16px;
   opacity: 0.9;
 }
 
@@ -5029,6 +5137,9 @@ section[id] {
   font-size: 28px;
   margin: 8px 0;
   letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
 /* Bottom Footnote */
@@ -5062,7 +5173,12 @@ section[id] {
   
   .sec18-btn {
     max-width: 100%;
-    padding: 20px 16px;
+    padding: 18px 16px;
+    border-width: 2px;
+  }
+
+  .sec18-btn-red{
+    padding: 40px 0px;
   }
   
   .sec18-btn-top {
@@ -5070,7 +5186,8 @@ section[id] {
   }
   
   .sec18-phone-number {
-    font-size: 24px;
+    font-size: 22px;
+    margin: 6px 0;
   }
   
   .sec18-footnote {
