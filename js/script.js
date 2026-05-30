@@ -55,6 +55,13 @@
     
     function closeMenuOnAction() {
       closeMobileMenu();
+      // Close mobile menu when a nav link is clicked
+const mobileNavLinks = document.querySelectorAll('.mobile-nav-links a');
+mobileNavLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    closeMobileMenu(); // Your existing close function
+  });
+});
     }
     
     mobileNavItems.forEach(item => {
