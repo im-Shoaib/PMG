@@ -1,0 +1,1557 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>ヘッダーセクション | ランディングページ</title>
+  <!-- Google Fonts: Noto Sans JP (500 Medium) -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-container">
+    <!-- 左側: プレースホルダー画像 (ロゴエリア) -->
+    <div class="logo">
+      <img 
+        src="assets/logo1.png" 
+        alt="Brand Logo Placeholder"
+        style="border-radius: 4px;"
+      >
+    </div>
+
+    <!-- デスクトップ用ナビゲーションリンク (センター/右側に配置) -->
+    <nav class="desktop-nav">
+      <ul class="nav-list">
+        <li>選ばれる理由</li>
+        <li>事例</li>
+        <li>支援体制</li>
+        <li>他社比較</li>
+        <li>FAQ</li>
+      </ul>
+    </nav>
+
+    <!-- デスクトップ用: コンタクトブロック＋CTAグループ (右端) -->
+    <div class="desktop-contact-cta-group">
+      <div class="contact-block">
+        <div class="phone-number">0120-901-680</div>
+        <div class="subtext">8:00〜20:00 / 土日対応</div>
+      </div>
+      <button class="cta-button">無料相談</button>
+    </div>
+
+    <!-- モバイル用 ハンバーガーボタン -->
+    <button class="hamburger" id="hamburgerBtn" aria-label="メニューを開閉">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+
+  <!-- モバイルメニュー (ハンバーガー開いた時に表示：縦並び・中央揃え) -->
+  <div class="mobile-menu" id="mobileMenu">
+    <!-- 縦並びナビリンク -->
+    <ul class="mobile-nav-links">
+      <li>選ばれる理由</li>
+      <li>事例</li>
+      <li>支援体制</li>
+      <li>他社比較</li>
+      <li>FAQ</li>
+    </ul>
+    <!-- コンタクトブロック (中央揃え) -->
+    <div class="mobile-contact-block">
+      <div class="phone-number">0120-901-680</div>
+      <div class="subtext">8:00〜20:00 / 土日対応</div>
+    </div>
+    <!-- CTAボタン (最下部) -->
+    <button class="cta-button mobile-cta">無料相談</button>
+  </div>
+</header>
+
+
+<!-- Section 1: Hero Section with Form -->
+<section class="sec1-hero-section">
+  <div class="sec1-container">
+    <!-- Left Column: Content -->
+    <div class="sec1-left-content">
+      <!-- Top Tagline with glow effect -->
+      <div class="sec1-tagline">借り入れじゃない、新しい資金調達。</div>
+      
+      <!-- Main Heading -->
+      <h1 class="sec1-main-heading">
+        最短30分。売掛金を、<br>必要なタイミングで資金化。
+      </h1>
+      
+      <!-- Three Achievement Coins -->
+      <div class="sec1-coins">
+        <img src="assets/coin1.png" alt="Achievement Coin 1" class="sec1-coin-img">
+        <img src="assets/coin2.png" alt="Achievement Coin 2" class="sec1-coin-img">
+        <img src="assets/coin3.png" alt="Achievement Coin 3" class="sec1-coin-img">
+      </div>
+      
+      <!-- Legal Annotation -->
+      <div class="sec1-legal-text">※売上No.1：東京商工リサーチ調べ／5冠：2026年1月指定領域市場調査</div>
+      
+      <!-- Description Paragraph -->
+      <p class="sec1-description">
+        銀行融資を待てない、取引先に知られず資金化したい。<br>
+        中小企業の資金繰りに向き合ってきたPMGが、最適な方法をご提案します。
+      </p>
+      
+      <!-- Feature Checklist (2x2 Grid) -->
+      <div class="sec1-checklist">
+        <div class="sec1-check-item">
+          <span class="sec1-check-icon">✓</span>
+          <span>最大3億円まで相談可能</span>
+        </div>
+        <div class="sec1-check-item">
+          <span class="sec1-check-icon">✓</span>
+          <span>3社間・2社間ファクタリングに対応</span>
+        </div>
+        <div class="sec1-check-item">
+          <span class="sec1-check-icon">✓</span>
+          <span>取引先に知られず相談可能</span>
+        </div>
+        <div class="sec1-check-item">
+          <span class="sec1-check-icon">✓</span>
+          <span>赤字決算でも相談可能</span>
+        </div>
+      </div>
+      
+      <!-- Google Reviews Graphic -->
+      <div class="sec1-google-reviews">
+        <img src="assets/rating.png" alt="Google Reviews" class="sec1-google-img">
+      </div>
+      
+      <!-- Action Buttons (Side by Side) -->
+      <div class="sec1-action-buttons">
+        <button class="sec1-btn-red">30秒で無料相談する</button>
+        <button class="sec1-btn-green">
+          <span class="sec1-phone-label">電話で相談</span>
+          <span class="sec1-phone-number"><i class="fa-solid fa-phone"></i>&nbsp;0120-901-680</span>
+          <span class="sec1-phone-subtext">8:00〜20:00 / 土日対応</span>
+        </button>
+      </div>
+    </div>
+    
+    <!-- Right Column: Form Area -->
+    <div class="sec1-form-container">
+      <!-- Floating Top Label -->
+      <div class="sec1-floating-label">まずは無料でお問い合わせ</div>
+      
+      <!-- Form Card -->
+      <div class="sec1-form-card">
+        <h2 class="sec1-form-title">無料で資金化のご相談・お見積り</h2>
+        <p class="sec1-form-subtitle">最短10分でご返信いたします</p>
+        
+        <form class="sec1-form">
+          <!-- 会社名 (Required) -->
+          <div class="sec1-form-group">
+            <label class="sec1-label">会社名 <span class="sec1-required">必須</span></label>
+            <input type="text" class="sec1-input" placeholder="例: 株式会社サンプル">
+          </div>
+          
+          <!-- 代表者名 (Required) -->
+          <div class="sec1-form-group">
+            <label class="sec1-label">代表者名 <span class="sec1-required">必須</span></label>
+            <input type="text" class="sec1-input" placeholder="例: 山田太郎">
+          </div>
+          
+          <!-- 電話番号 & メールアドレス (side-by-side on desktop) -->
+          <div class="sec1-row-fields">
+            <div class="sec1-form-group sec1-half">
+              <label class="sec1-label">電話番号 <span class="sec1-required">必須</span></label>
+              <input type="tel" class="sec1-input" placeholder="03-1234-5678">
+            </div>
+            <div class="sec1-form-group sec1-half">
+              <label class="sec1-label">メールアドレス <span class="sec1-required">必須</span></label>
+              <input type="email" class="sec1-input" placeholder="info@example.com">
+            </div>
+          </div>
+          
+          <!-- 都道府県 (Required) -->
+          <div class="sec1-form-group">
+            <label class="sec1-label">都道府県 <span class="sec1-required">必須</span></label>
+            <select class="sec1-select">
+              <option value="">選択してください</option>
+              <option>北海道</option><option>東京都</option><option>大阪府</option><option>愛知県</option>
+              <option>神奈川県</option><option>埼玉県</option><option>千葉県</option><option>兵庫県</option>
+            </select>
+          </div>
+          
+          <!-- 売掛金額(おおよそ) (Required) -->
+          <div class="sec1-form-group">
+            <label class="sec1-label">売掛金額(おおよそ) <span class="sec1-required">必須</span></label>
+            <select class="sec1-select">
+              <option value="">選択してください</option>
+              <option>〜100万円</option><option>100万円〜500万円</option>
+              <option>500万円〜1000万円</option><option>1000万円〜3000万円</option>
+              <option>3000万円以上</option>
+            </select>
+          </div>
+          
+          <!-- 希望入金時期 (No required tag) -->
+          <div class="sec1-form-group">
+            <label class="sec1-label">希望入金時期</label>
+            <input type="text" class="sec1-input" placeholder="指定なし">
+          </div>
+          
+          <!-- Submit Button -->
+          <button type="submit" class="sec1-submit-btn">無料で相談する</button>
+          
+          <!-- Disclaimer Text -->
+          <div class="sec1-disclaimer">
+            個人情報の取り扱いについては<a href="#">プライバシーポリシー</a>をご確認ください。<br>
+            送信いただいた時点で、内容に同意したものとみなします。
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 2: Problems/Concerns Section -->
+<section class="sec2-problems-section">
+  <div class="sec2-container">
+    <!-- Section Heading -->
+    <h2 class="sec2-heading">
+      こんな<span class="sec2-highlight">お悩み</span>はありませんか？
+    </h2>
+    
+    <!-- DESKTOP LAYOUT (your original HTML, untouched) -->
+    <div class="sec2-desktop-layout">
+      <div class="sec2-problems-layout">
+        <!-- Bubble 1 - Top Left -->
+        <div class="sec2-thought-bubble sec2-bubble-1">
+          <img src="assets/bubble.png" alt="" class="sec2-bubble-bg">
+          <p class="sec2-bubble-text">銀行融資を<br>待っていられない</p>
+        </div>
+        
+        <!-- Bubble 2 - Top Middle -->
+        <div class="sec2-thought-bubble sec2-bubble-2">
+          <img src="assets/bubble.png" alt="" class="sec2-bubble-bg">
+          <p class="sec2-bubble-text">取引先に知られず<br>資金化したい</p>
+        </div>
+        
+        <!-- Bubble 3 - Top Right -->
+        <div class="sec2-thought-bubble sec2-bubble-3">
+          <img src="assets/bubble.png" alt="" class="sec2-bubble-bg">
+          <p class="sec2-bubble-text">税金・社会保険料の<br>支払いが迫っている</p>
+        </div>
+        
+        <!-- Bubble 4 - Bottom Left-Center -->
+        <div class="sec2-thought-bubble sec2-bubble-4">
+          <img src="assets/bubble.png" alt="" class="sec2-bubble-bg">
+          <p class="sec2-bubble-text">急な支払いに<br>間に合わせたい</p>
+        </div>
+        
+        <!-- Bubble 5 - Bottom Right-Center -->
+        <div class="sec2-thought-bubble sec2-bubble-5">
+          <img src="assets/bubble.png" alt="" class="sec2-bubble-bg">
+          <p class="sec2-bubble-text">入金サイトが長く<br>運転資金が足りない</p>
+        </div>
+        
+        <!-- Characters -->
+        <div class="sec2-character sec2-character-1">
+          <img src="assets/meet-desk.png" alt="Two men at desk">
+        </div>
+        <div class="sec2-character sec2-character-2">
+          <img src="assets/man1.png" alt="Distressed man">
+        </div>
+        <div class="sec2-character sec2-character-3">
+          <img src="assets/man2.png" alt="Annoyed man">
+        </div>
+        <div class="sec2-character sec2-character-4">
+          <img src="assets/man-woman-meet.png" alt="Man and woman talking">
+        </div>
+      </div>
+    </div>
+    
+    <!-- MOBILE LAYOUT (new, only for mobile) -->
+    <div class="sec2-mobile-layout">
+      <!-- Row 1 -->
+      <div class="sec2-mobile-row">
+        <div class="sec2-mobile-item">
+          <div class="sec2-thought-bubble">
+            <img src="assets/bubble.png" alt="" class="sec2-bubble-bg">
+            <p class="sec2-bubble-text">銀行融資を<br>待っていられない</p>
+          </div>
+          <div class="sec2-character">
+            <img src="assets/man1.png" alt="Distressed man">
+          </div>
+        </div>
+        <div class="sec2-mobile-item">
+          <div class="sec2-thought-bubble">
+            <img src="assets/bubble.png" alt="" class="sec2-bubble-bg">
+            <p class="sec2-bubble-text">取引先に知られず<br>資金化したい</p>
+          </div>
+          <div class="sec2-character">
+            <img src="assets/man2.png" alt="Annoyed man">
+          </div>
+        </div>
+      </div>
+      
+      <!-- Row 2 -->
+      <div class="sec2-mobile-row-center">
+        <div class="sec2-mobile-item">
+          <div class="sec2-thought-bubble">
+            <img src="assets/bubble.png" alt="" class="sec2-bubble-bg">
+            <p class="sec2-bubble-text">急な支払いに<br>間に合わせたい</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Row 3 -->
+      <div class="sec2-mobile-row">
+        <div class="sec2-mobile-item">
+          <div class="sec2-thought-bubble">
+            <img src="assets/bubble.png" alt="" class="sec2-bubble-bg">
+            <p class="sec2-bubble-text">入金サイトが長く<br>運転資金が足りない</p>
+          </div>
+          <div class="sec2-character">
+            <img src="assets/meet-desk.png" alt="Two men at desk">
+          </div>
+        </div>
+        <div class="sec2-mobile-item">
+          <div class="sec2-thought-bubble">
+            <img src="assets/bubble.png" alt="" class="sec2-bubble-bg">
+            <p class="sec2-bubble-text">税金・社会保険料の<br>支払いが迫っている</p>
+          </div>
+          <div class="sec2-character">
+            <img src="assets/man-woman-meet.png" alt="Man and woman talking">
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+<!-- Section 3: Methods Section -->
+<section class="sec3-section">
+  <div class="sec3-container">
+    
+    <!-- Section Heading with Lightbulb -->
+    <div class="sec3-heading-wrapper">
+      <img src="assets/bulb.png" alt="Lightbulb icon" class="sec3-lightbulb">
+      <h2 class="sec3-heading">
+        <span class="sec3-highlight-text">借り入れに頼らず、</span>売掛金を資金化する方法
+      </h2>
+    </div>
+    
+    <!-- Card Grid -->
+    <div class="sec3-card-grid">
+      
+      <!-- Card 1 - Top Left -->
+      <div class="sec3-card sec3-card-tilt">
+        <div class="sec3-card-inner">
+          <div class="sec3-card-text">
+            <p>融資ではない</p>
+          </div>
+          <div class="sec3-card-image">
+            <img src="assets/tilt1.png" alt="Yen symbol and person">
+          </div>
+        </div>
+      </div>
+      
+      <!-- Card 2 - Top Right -->
+      <div class="sec3-card sec3-card-tilt">
+        <div class="sec3-card-inner">
+          <div class="sec3-card-text">
+            <p>売掛金を<br>早急に資金化</p>
+          </div>
+          <div class="sec3-card-image">
+            <img src="assets/titl2.png" alt="Coins, calculator, and documents">
+          </div>
+        </div>
+      </div>
+      
+      <!-- Card 3 - Bottom Left -->
+      <div class="sec3-card sec3-card-tilt">
+        <div class="sec3-card-inner">
+          <div class="sec3-card-text">
+            <p>２社間なら取引先に<br>知られず相談可能</p>
+          </div>
+          <div class="sec3-card-image">
+            <img src="assets/tilt3.png" alt="Two men talking">
+          </div>
+        </div>
+      </div>
+      
+      <!-- Card 4 - Bottom Right -->
+      <div class="sec3-card sec3-card-tilt">
+        <div class="sec3-card-inner">
+          <div class="sec3-card-text">
+            <p>急な資金需要に<br>対応しやすい</p>
+          </div>
+          <div class="sec3-card-image">
+            <img src="assets/tilt4.png" alt="Person running with briefcase">
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    
+  </div>
+</section>
+
+<!-- Section 4: PMGが選ばれる理由 -->
+<section class="sec4-section">
+  <div class="sec4-container">
+    
+    <!-- Section Heading -->
+    <h2 class="sec4-heading">PMGが選ばれる理由</h2>
+    
+    <!-- Cards Grid -->
+    <div class="sec4-card-grid">
+      
+      <!-- Card 1 - Left -->
+      <div class="sec4-card">
+        <div class="sec4-point">POINT 01</div>
+        <h3 class="sec4-title">最短30分で資金化</h3>
+        <div class="sec4-image">
+          <img src="assets/point1.png" alt="Charts, calculator, yen symbol and people">
+        </div>
+        <p class="sec4-bottom-text">取引先に知られず相談可</p>
+      </div>
+      
+      <!-- Card 2 - Center -->
+      <div class="sec4-card">
+        <div class="sec4-point">POINT 02</div>
+        <h3 class="sec4-title">買取額の上限なし</h3>
+        <div class="sec4-image">
+          <img src="assets/point2.png" alt="Person climbing bar chart with coins">
+        </div>
+        <p class="sec4-bottom-text">赤字決算でも相談可能</p>
+      </div>
+      
+      <!-- Card 3 - Right -->
+      <div class="sec4-card">
+        <div class="sec4-point">POINT 03</div>
+        <h3 class="sec4-title">3社間・2社間に対応</h3>
+        <div class="sec4-image">
+          <img src="assets/point3.png" alt="Buildings, boxes, and two people talking">
+        </div>
+        <p class="sec4-bottom-text">全国対応</p>
+      </div>
+      
+    </div>
+    
+  </div>
+</section>
+
+<!-- Section 6: Support Section -->
+<section class="sec6-section">
+  <div class="sec6-container">
+    
+    <!-- 1. Top Header & Description Area -->
+    <div class="sec6-header-wrapper">
+      <div class="sec6-header-text">
+        <h2 class="sec6-main-title">
+          資金化で終わらず、<br>
+          その先の経営課題まで支援
+        </h2>
+        <p class="sec6-description">
+          ファクタリングが必要になる背景には、資金調達の選択肢不足や財務改善、事業承継など、<br>
+          より大きな経営課題が隠れていることもあります。<br>
+          PMGは売掛金の資金化だけでなく、企業の状況に応じて次の一手までご提案します。
+        </p>
+      </div>
+      <div class="sec6-header-image">
+        <img src="assets/sec6-top.png" alt="People climbing a branching dark red arrow">
+      </div>
+    </div>
+    
+    <!-- 2. Four-Step Chevron Process Flow -->
+    <!-- Numbers placed OUTSIDE the steps wrapper -->
+    <div class="sec6-numbers-wrapper">
+      <div class="sec6-number sec6-number-1">01</div>
+      <div class="sec6-number sec6-number-2">02</div>
+      <div class="sec6-number sec6-number-3">03</div>
+      <div class="sec6-number sec6-number-4">04</div>
+    </div>
+    
+    <div class="sec6-steps-wrapper">
+      
+      <!-- Step 1 -->
+      <div class="sec6-step sec6-step-1">
+        <div class="sec6-step-border">
+          <div class="sec6-step-content-wrapper">
+            <div class="sec6-step-content">
+              <h3 class="sec6-step-title">ファクタリング</h3>
+              <div class="sec6-step-image">
+                <img src="assets/sec6-1.png" alt="Stacks of money/coins">
+              </div>
+              <p class="sec6-step-text">まずは必要な資金を確保</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Step 2 -->
+      <div class="sec6-step sec6-step-2">
+        <div class="sec6-step-border">
+          <div class="sec6-step-content-wrapper">
+            <div class="sec6-step-content">
+              <h3 class="sec6-step-title">資金調達支援</h3>
+              <div class="sec6-step-image">
+                <img src="assets/sec6-2.png" alt="People putting coins in a large glass jar">
+              </div>
+              <p class="sec6-step-text">融資・補助金・助成金など、<br>調達手段の選択肢を広げる</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Step 3 -->
+      <div class="sec6-step sec6-step-3">
+        <div class="sec6-step-border">
+          <div class="sec6-step-content-wrapper">
+            <div class="sec6-step-content">
+              <h3 class="sec6-step-title">経営改善サポート</h3>
+              <div class="sec6-step-image">
+                <img src="assets/sec6-3.png" alt="Two people sitting at a table with laptops">
+              </div>
+              <p class="sec6-step-text">財務改善や計画策定を通じて、<br>資金繰りの根本改善へ</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Step 4 -->
+      <div class="sec6-step sec6-step-4">
+        <div class="sec6-step-border">
+          <div class="sec6-step-content-wrapper">
+            <div class="sec6-step-content">
+              <h3 class="sec6-step-title">事業承継<br>M&A支援</h3>
+              <div class="sec6-step-image">
+                <img src="assets/sec6-4.png" alt="Two people shaking hands">
+              </div>
+              <p class="sec6-step-text">将来の選択肢まで見据え、<br>次の経営判断を支援</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    
+  </div>
+</section>
+
+<!-- Section 7: CTA Banner + Comparison Table -->
+<section class="sec7-section">
+  <div class="sec7-container">
+    
+    <!-- 1. Top CTA Banner -->
+    <div class="sec7-cta-banner">
+      <h2 class="sec7-cta-title">あなたの会社にPMGが合うか確認できます</h2>
+      <p class="sec7-cta-subtitle">無料相談・しつこい営業電話なし・個人情報厳重管理</p>
+      <div class="sec7-cta-buttons">
+        <button class="sec7-btn-white">無料相談する</button>
+        <button class="sec7-btn-outline">
+          <span class="sec7-phone-number">0120-901-680</span>
+          <span class="sec7-phone-hours">8:00〜20:00 / 土日対応</span>
+        </button>
+      </div>
+    </div>
+    
+    <!-- 2. Section Header (Comparison Title) -->
+    <div class="sec7-comparison-header">
+      
+      <h3 class="sec7-main-title">
+        <div class="sec7-badge">
+        <span class="sec7-badge-text">徹底</span><span class="sec7-badge-text-red">比較</span>
+      </div>
+        中堅法人の最適解は<span class="sec7-highlight-red">PMG</span>
+      </h3>
+      <p class="sec7-sub-description">
+        速度型(フィンテック系)・大口型(銀行系)・専業型(業種特化)とPMGの違いを項目別に比較しました。
+      </p>
+    </div>
+    
+    <!-- 3. Comparison Table (Scrollable on mobile) -->
+    <div class="sec7-table-wrapper">
+      <table class="sec7-comparison-table">
+        <thead>
+          <tr>
+            <th class="sec7-corner-cell"></th>
+            <th class="sec7-pmg-col-header"><img src="assets/logo.png" alt="logo"></th>
+            <th>フィンテック系<br><span class="sec7-small-text">(QuQuMo / 株式会社No.1 等)</span></th>
+            <th>銀行系・上場系<br><span class="sec7-small-text">(GMO BtoB / 三井住友F&L)</span></th>
+            <th>業種特化系<br><span class="sec7-small-text">(けんせつくん等)</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Row 1: 入金スピード -->
+          <tr>
+            <td class="sec7-row-label">入金スピード</td>
+            <td class="sec7-pmg-cell">◎ 最短30分</td>
+            <td>◎ 最短10~30分</td>
+            <td>× 2~5営業日</td>
+            <td>〇 最短2時間~翌日</td>
+          </tr>
+          <!-- Row 2: 買取上限 -->
+          <tr>
+            <td class="sec7-row-label">買取上限</td>
+            <td class="sec7-pmg-cell">◎ 3億円</td>
+            <td>〇 制限なし(実態1億未満)</td>
+            <td>◎ 1~2億円(超大口可)</td>
+            <td>〇 5,000万~1億円</td>
+          </tr>
+          <!-- Row 3: 2社間/3社間 -->
+          <tr>
+            <td class="sec7-row-label">2社間/3社間</td>
+            <td class="sec7-pmg-cell">◎ 両対応</td>
+            <td>〇 2社間中心</td>
+            <td>△ 3社間中心</td>
+            <td>△ 両対応</td>
+          </tr>
+          <!-- Row 4: 取引先非通知 -->
+          <tr>
+            <td class="sec7-row-label">取引先非通知</td>
+            <td class="sec7-pmg-cell">◎ 可能</td>
+            <td>◎ 可能</td>
+            <td>× 通知必要</td>
+            <td>◎ 可能</td>
+          </tr>
+          <!-- Row 5: 全国拠点数 -->
+          <tr>
+            <td class="sec7-row-label">全国拠点数</td>
+            <td class="sec7-pmg-cell">◎ 10拠点</td>
+            <td>△ 1~3拠点</td>
+            <td>× 本社のみ</td>
+            <td>△ 1~2拠点</td>
+          </tr>
+          <!-- Row 6: 対面相談 -->
+          <tr>
+            <td class="sec7-row-label">対面相談</td>
+            <td class="sec7-pmg-cell">◎ 全国対応</td>
+            <td>× オンライン中心</td>
+            <td>△ 大口のみ</td>
+            <td>△ 業種限定</td>
+          </tr>
+          <!-- Row 7: 個人事業主 -->
+          <tr>
+            <td class="sec7-row-label">個人事業主</td>
+            <td class="sec7-pmg-cell">◎ 可</td>
+            <td>◎ 可</td>
+            <td>× 不可</td>
+            <td>◎ 可</td>
+          </tr>
+          <!-- Row 8: 統合経営支援 -->
+          <tr>
+            <td class="sec7-row-label">統合経営支援</td>
+            <td class="sec7-pmg-cell">8サービス</td>
+            <td>- なし</td>
+            <td>- なし</td>
+            <td>- なし</td>
+          </tr>
+          <!-- Row 9: 第三者調査根拠 -->
+          <tr>
+            <td class="sec7-row-label">第三者調査根拠</td>
+            <td class="sec7-pmg-cell">東商 5年連続No.1</td>
+            <td>なし</td>
+            <td>上場ブランド</td>
+            <td>業界実績</td>
+          </tr>
+          <!-- Row 10: 赤字決算の審査 -->
+          <tr>
+            <td class="sec7-row-label">赤字決算の審査</td>
+            <td class="sec7-pmg-cell">◎ 柔軟対応</td>
+            <td>△ AI審査次第</td>
+            <td>× 厳格</td>
+            <td>〇 業種次第</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+  </div>
+</section>
+
+<!-- Section 8: Logo Strip Section -->
+<section class="sec8-section">
+  <div class="sec8-container">
+    <div class="sec8-logos">
+      <img src="assets/sec8-1.png" alt="Logo 1" class="sec8-logo">
+      <img src="assets/sec8-5.png" alt="Logo 2" class="sec8-logo">
+      <img src="assets/sec8-3.png" alt="Logo 3" class="sec8-logo">
+      <img src="assets/sec8-4.png" alt="Logo 4" class="sec8-logo">
+      <img src="assets/sec8-5.png" alt="Logo 5" class="sec8-logo">
+    </div>
+  </div>
+</section>
+
+<!-- Section 9: Awards / No. 1 Achievements -->
+<section class="sec9-section">
+  <div class="sec9-container">
+    
+    <!-- Left Column: 5 Medals Block -->
+    <div class="sec9-left-col">
+      <h3 class="sec9-left-heading">
+        ファクタリングサービスで<br>
+        <span class="sec9-gold-large">5冠達成！※</span>
+      </h3>
+      
+      <div class="sec9-medals-grid">
+        <!-- Medal 1 -->
+        <div class="sec9-medal-item">
+          <img src="assets/sec9-1.png" alt="Gold medal" class="sec9-medal-img">
+          <p class="sec9-medal-text">利用者数No.1</p>
+        </div>
+        <!-- Medal 2 -->
+        <div class="sec9-medal-item">
+          <img src="assets/sec9-2.png" alt="Gold medal" class="sec9-medal-img">
+          <p class="sec9-medal-text">限度額No.1</p>
+        </div>
+        <!-- Medal 3 -->
+        <div class="sec9-medal-item">
+          <img src="assets/sec9-3.png" alt="Gold medal" class="sec9-medal-img">
+          <p class="sec9-medal-text">手数料率No.1</p>
+        </div>
+        <!-- Medal 4 -->
+        <div class="sec9-medal-item">
+          <img src="assets/sec9-4.png" alt="Gold medal" class="sec9-medal-img">
+          <p class="sec9-medal-text">問合せ数No.1</p>
+        </div>
+        <!-- Medal 5 -->
+        <div class="sec9-medal-item">
+          <img src="assets/sec9-5.png" alt="Gold medal" class="sec9-medal-img">
+          <p class="sec9-medal-text">スピード対応No.1</p>
+        </div>
+      </div>
+      
+      <p class="sec9-left-footnote">
+        ※2026年1月指定領域における市場調査／調査機関：日本マーケティングリサーチ機構
+      </p>
+    </div>
+    
+    <!-- Right Column: Single Award Block -->
+    <div class="sec9-right-col">
+      <h3 class="sec9-right-heading">
+        独立系ファクタリング企業<br>
+        <span class="sec9-gold-large">5年連続売上No.1※</span>
+      </h3>
+      
+      <div class="sec9-award-image">
+        <img src="assets/sec9-right.png" alt="5年連続売上No.1 award" class="sec9-award-img">
+      </div>
+      
+      <p class="sec9-caption">独立系ファクタリング企業売上No.1</p>
+      <p class="sec9-right-footnote">※2026年2月時点／調査期間：東京商工リサーチ</p>
+    </div>
+    
+  </div>
+</section>
+
+<!-- Section 10: Case Studies -->
+<section class="sec10-section">
+  <div class="sec10-container">
+    
+    <!-- Section Header -->
+    <h2 class="sec10-title">実際のご利用事例</h2>
+    <p class="sec10-subtitle">
+      PMG公式サイトに掲載されている事例をもとに、業種ごとの資金繰り課題と活用シーンをご紹介します。
+    </p>
+    
+    <!-- Card Grid (Desktop & Mobile Horizontal Scroll) -->
+    <div class="sec10-cards-wrapper">
+      
+      <!-- Card 1 -->
+      <div class="sec10-card">
+        <div class="sec10-category">建設業 | 東京都</div>
+        <div class="sec10-card-image">
+          <img src="assets/sec10.png" alt="Case study 1">
+        </div>
+        <h3 class="sec10-card-title">入金サイトの長期化で<br>資金繰りが悪化</h3>
+        <p class="sec10-card-description">
+          建設業界特有の長期入金サイトに悩む企業様。売掛金を早期に資金化することで、外注費や仕入れ費を滞りなく支払えるようになりました。
+        </p>
+        
+        <!-- Data Table - Vertical alternating rows -->
+        <div class="sec10-table">
+          <div class="sec10-table-row sec10-table-label-row">業種・地域</div>
+          <div class="sec10-table-row sec10-table-value-row">建設業／東京都</div>
+          <div class="sec10-table-row sec10-table-label-row">課題</div>
+          <div class="sec10-table-row sec10-table-value-row">入金サイトの長期化</div>
+          <div class="sec10-table-row sec10-table-label-row">対応</div>
+          <div class="sec10-table-row sec10-table-value-row">売掛金早期資金化</div>
+          <div class="sec10-table-row sec10-table-label-row">活用ポイント</div>
+          <div class="sec10-table-row sec10-table-value-row">外注費・仕入れ費の支払いに活用</div>
+        </div>
+      </div>
+      
+      <!-- Card 2 -->
+      <div class="sec10-card">
+        <div class="sec10-category">運送・物流 | 大阪府</div>
+        <div class="sec10-card-image">
+          <img src="assets/sec10.png" alt="Case study 2">
+        </div>
+        <h3 class="sec10-card-title">燃料費高騰で<br>資金ショート寸前</h3>
+        <p class="sec10-card-description">
+          燃料費の急激な高騰により資金繰りが逼迫。売掛金を即日資金化することで、運転資金を確保し事業を継続できました。
+        </p>
+        
+        <div class="sec10-table">
+          <div class="sec10-table-row sec10-table-label-row">業種・地域</div>
+          <div class="sec10-table-row sec10-table-value-row">運送・物流／大阪府</div>
+          <div class="sec10-table-row sec10-table-label-row">課題</div>
+          <div class="sec10-table-row sec10-table-value-row">燃料費高騰</div>
+          <div class="sec10-table-row sec10-table-label-row">対応</div>
+          <div class="sec10-table-row sec10-table-value-row">売掛金即日資金化</div>
+          <div class="sec10-table-row sec10-table-label-row">活用ポイント</div>
+          <div class="sec10-table-row sec10-table-value-row">運転資金の確保</div>
+        </div>
+      </div>
+      
+      <!-- Card 3 -->
+      <div class="sec10-card">
+        <div class="sec10-category">製造業 | 愛知県</div>
+        <div class="sec10-card-image">
+          <img src="assets/sec10.png" alt="Case study 3">
+        </div>
+        <h3 class="sec10-card-title">設備投資のため<br>まとまった資金が必要</h3>
+        <p class="sec10-card-description">
+          新規設備導入のための資金を短期間で調達。売掛金を活用することで、銀行融資に頼らない資金調達を実現しました。
+        </p>
+        
+        <div class="sec10-table">
+          <div class="sec10-table-row sec10-table-label-row">業種・地域</div>
+          <div class="sec10-table-row sec10-table-value-row">製造業／愛知県</div>
+          <div class="sec10-table-row sec10-table-label-row">課題</div>
+          <div class="sec10-table-row sec10-table-value-row">設備投資資金不足</div>
+          <div class="sec10-table-row sec10-table-label-row">対応</div>
+          <div class="sec10-table-row sec10-table-value-row">売掛金まとめ資金化</div>
+          <div class="sec10-table-row sec10-table-label-row">活用ポイント</div>
+          <div class="sec10-table-row sec10-table-value-row">設備導入資金に活用</div>
+        </div>
+      </div>
+      
+    </div>
+    
+    <!-- Section Footnote -->
+    <p class="sec10-footnote">
+      ※事例は実際のお客様の声を元に、特定不可能な形で再構成しています。買取金額・期間は案件ごとに変動します。
+    </p>
+    
+  </div>
+</section>
+
+<!-- Section 11: Gold Plan & Floating Title Box -->
+<section class="sec11-section">
+  <div class="sec11-container">
+    
+    <!-- 1. Top Header Area -->
+    <div class="sec11-header-wrapper">
+      <div class="sec11-header-text">
+        <h2 class="sec11-main-title">
+          お客様のニーズに合わせて<br>
+          最適なプランをご提案
+        </h2>
+        <p class="sec11-subtitle">
+          取引先への通知有無・手数料の安さで使い分け。<br>
+          お客様のニーズに合わせてに応じてご提案します。
+        </p>
+      </div>
+      <div class="sec11-header-image">
+        <img src="assets/sec11-top.png" alt="Hands and document">
+      </div>
+    </div>
+    
+    <!-- 2. The Gold Plan Card -->
+    <div class="sec11-gold-card">
+      
+      <!-- Top-Left Ribbon & Coin -->
+      <div class="sec11-ribbon-wrapper">
+        <div class="sec11-ribbon">
+          取引先<span class="sec11-ribbon-highlight">非</span>通知
+        </div>
+        <div class="sec11-coin">
+          <img src="assets/sec11-coin.png" alt="Gold coin">
+        </div>
+      </div>
+      
+      <!-- Card Inner Content -->
+      <div class="sec11-card-inner">
+        
+        <!-- Left Column: Offer -->
+        <div class="sec11-offer-col">
+          <h3 class="sec11-offer-title">取引先に知られず資金化</h3>
+          <div class="sec11-rate">
+            <span class="sec11-rate-number">2%</span>
+            <span class="sec11-rate-text">〜 /手数料</span>
+          </div>
+        </div>
+        
+        <!-- Right Column: Checklist Grid -->
+        <div class="sec11-checklist">
+          <div class="sec11-check-item">
+            <span class="sec11-check-icon">✓</span>
+            <span>取引先への通知不要</span>
+          </div>
+          <div class="sec11-check-item">
+            <span class="sec11-check-icon">✓</span>
+            <span>関係性を維持したまま資金化</span>
+          </div>
+          <div class="sec11-check-item">
+            <span class="sec11-check-icon">✓</span>
+            <span>最短30分入金</span>
+          </div>
+          <div class="sec11-check-item">
+            <span class="sec11-check-icon">✓</span>
+            <span>赤字決算でも審査可能</span>
+          </div>
+        </div>
+        
+      </div>
+      
+      <!-- Footnote -->
+      <p class="sec11-card-footnote">
+        ※手数料は売掛先の信用力・売掛金額・支払サイトに応じて変動します。具体的な見積りは無料相談でご提示します。
+      </p>
+      
+    </div>
+    
+    <!-- 3. Bottom Floating Title Box -->
+    <div class="sec11-floating-box">
+      <div class="sec11-floating-title">必要な分だけ、売掛金を資金化できます。</div>
+      <div class="sec11-floating-content">
+        <p>例えば…</p>
+        <p>
+          500万円の売掛金のうち、急ぎで必要な100万円分だけを買取対象にすることも可能です。<br>
+          資金需要に合わせて、必要な金額だけを相談できます。
+        </p>
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+<!-- Section 12: Usage Flow (ご利用の流れ) -->
+<section class="sec12-section">
+  <div class="sec12-container">
+    
+    <!-- Header Area -->
+    <h2 class="sec12-title">ご利用の流れ</h2>
+    <p class="sec12-subtitle">
+      5ステップで完結。<span class="sec12-mobile-break">最短30分、平均でも当日中に資金化できます。</span>
+    </p>
+    
+    <!-- Process Flow Row (Desktop: horizontal, Mobile: vertical) -->
+    <div class="sec12-flow-wrapper">
+      
+      <!-- Step 1 -->
+      <div class="sec12-step">
+        <div class="sec12-card">
+          <div class="sec12-card-number">01</div>
+          <h3 class="sec12-card-title">無料相談</h3>
+          <div class="sec12-card-icon">
+            <img src="assets/sec12-1.png" alt="Person with speech bubble">
+          </div>
+          <p class="sec12-card-text">
+            フォームor電話で売掛金の<br>
+            概要をお伝えください
+          </p>
+        </div>
+      </div>
+      
+      <!-- Arrow 1 (Desktop: right, Mobile: down) -->
+      <div class="sec12-arrow"></div>
+      
+      <!-- Step 2 -->
+      <div class="sec12-step">
+        <div class="sec12-card">
+          <div class="sec12-card-number">02</div>
+          <h3 class="sec12-card-title">必要書類提出</h3>
+          <div class="sec12-card-icon">
+            <img src="assets/sec12-2.png" alt="Document papers">
+          </div>
+          <p class="sec12-card-text">
+            請求書・通帳・身分証明書を<br>
+            メールでご送付
+          </p>
+        </div>
+      </div>
+      
+      <!-- Arrow 2 -->
+      <div class="sec12-arrow"></div>
+      
+      <!-- Step 3 -->
+      <div class="sec12-step">
+        <div class="sec12-card">
+          <div class="sec12-card-number">03</div>
+          <h3 class="sec12-card-title">審査・お見積り</h3>
+          <div class="sec12-card-icon">
+            <img src="assets/sec12-3.png" alt="Three people behind a desk">
+          </div>
+          <p class="sec12-card-text">
+            専任スタッフがお客様の<br>
+            状況に合わせ最適提案
+          </p>
+        </div>
+      </div>
+      
+      <!-- Arrow 3 -->
+      <div class="sec12-arrow"></div>
+      
+      <!-- Step 4 -->
+      <div class="sec12-step">
+        <div class="sec12-card">
+          <div class="sec12-card-number">04</div>
+          <h3 class="sec12-card-title">契約締結</h3>
+          <div class="sec12-card-icon">
+            <img src="assets/sec12-4.png" alt="Handshake">
+          </div>
+          <p class="sec12-card-text">
+            オンラインor<br>
+            全国10拠点で対面契約
+          </p>
+        </div>
+      </div>
+      
+      <!-- Arrow 4 -->
+      <div class="sec12-arrow"></div>
+      
+      <!-- Step 5 -->
+      <div class="sec12-step">
+        <div class="sec12-card">
+          <div class="sec12-card-number">05</div>
+          <h3 class="sec12-card-title">入金完了</h3>
+          <div class="sec12-card-icon">
+            <img src="assets/sec12-5.png" alt="ATM dispensing money">
+          </div>
+          <p class="sec12-card-text">
+            ご指定の銀行口座にお振込み
+          </p>
+        </div>
+      </div>
+      
+    </div>
+    
+  </div>
+</section>
+
+<!-- Section 13: Company Overview & Info Grid -->
+<section class="sec13-section">
+  <div class="sec13-container">
+    
+    <!-- 1. Top CTA Banner (identical to previous section) -->
+    <div class="sec13-cta-banner">
+      <h2 class="sec13-cta-title">あなたの会社にPMGが合うか確認できます</h2>
+      <p class="sec13-cta-subtitle">無料相談・しつこい営業電話なし・個人情報厳重管理</p>
+      <div class="sec13-cta-buttons">
+        <button class="sec13-btn-white">無料相談する</button>
+        <button class="sec13-btn-outline">
+          <span class="sec13-phone-number">0120-901-680</span>
+          <span class="sec13-phone-hours">8:00〜20:00 / 土日対応</span>
+        </button>
+      </div>
+    </div>
+    
+    <!-- 2. Company Overview Header -->
+    <div class="sec13-company-header">
+      <h2 class="sec13-company-title">PMG株式会社の概要</h2>
+      <p class="sec13-company-description">
+        独立系ファクタリング売上 5年連続 No.1(東京商工リサーチ調べ)。中小企業支援機構として、信頼性と透明性を最優先しています。
+      </p>
+    </div>
+    
+    <!-- 3. Company Details Grid (3 columns, 9 cards) -->
+    <div class="sec13-info-grid">
+      
+      <!-- Card 1 -->
+      <div class="sec13-info-card">
+        <div class="sec13-card-header">商号</div>
+        <div class="sec13-card-body">
+          <div class="sec13-primary-value">ピーエムジー株式会社</div>
+          <div class="sec13-secondary-value">PMG INC.</div>
+        </div>
+      </div>
+      
+      <!-- Card 2 -->
+      <div class="sec13-info-card">
+        <div class="sec13-card-header">本社所在地</div>
+        <div class="sec13-card-body">
+          <div class="sec13-primary-value">東京都新宿区</div>
+          <div class="sec13-secondary-value">新宿NSビル25F</div>
+        </div>
+      </div>
+      
+      <!-- Card 3 -->
+      <div class="sec13-info-card">
+        <div class="sec13-card-header">事業内容</div>
+        <div class="sec13-card-body">
+          <div class="sec13-primary-value">財務支援・本業支援</div>
+          <div class="sec13-secondary-value">ファクタリング / 資金調達 / 税理士マッチング等</div>
+        </div>
+      </div>
+      
+      <!-- Card 4 -->
+      <div class="sec13-info-card">
+        <div class="sec13-card-header">ホールディングス</div>
+        <div class="sec13-card-body">
+          <div class="sec13-primary-value">5社</div>
+          <div class="sec13-secondary-value">
+            ピーエムジー株式会社 / PMGホールディングス<br>
+            PMG Logistics / 株式会社PMG Capital<br>
+            株式会社PMG MAPartner ★全国対応
+          </div>
+        </div>
+      </div>
+      
+      <!-- Card 5 -->
+      <div class="sec13-info-card">
+        <div class="sec13-card-header">認証・認定</div>
+        <div class="sec13-card-body">
+          <div class="sec13-primary-value">3件</div>
+          <div class="sec13-secondary-value">Pマーク / GPTW / 健康経営優良法人</div>
+        </div>
+      </div>
+      
+      <!-- Card 6 -->
+      <div class="sec13-info-card">
+        <div class="sec13-card-header">情報管理体制</div>
+        <div class="sec13-card-body">
+          <div class="sec13-primary-value">ISMS認証取得</div>
+          <div class="sec13-secondary-value">ISO/IEC 27001</div>
+        </div>
+      </div>
+      
+      <!-- Card 7 -->
+      <div class="sec13-info-card">
+        <div class="sec13-card-header">利用者評価</div>
+        <div class="sec13-card-body">
+          <div class="sec13-primary-value"><span class="sec13-gold-star">★</span> 4.9 / 5.0</div>
+          <div class="sec13-secondary-value">Googleレビュー981件</div>
+        </div>
+      </div>
+      
+      <!-- Card 8 -->
+      <div class="sec13-info-card">
+        <div class="sec13-card-header">業界実績</div>
+        <div class="sec13-card-body">
+          <div class="sec13-primary-value"><span class="sec13-gold-star">★</span> 5年連続売上No.1</div>
+          <div class="sec13-secondary-value">2026年2月時点 東京商工リサーチ調べ</div>
+        </div>
+      </div>
+      
+      <!-- Card 9 -->
+      <div class="sec13-info-card">
+        <div class="sec13-card-header">第三者調査</div>
+        <div class="sec13-card-body">
+          <div class="sec13-primary-value"><span class="sec13-gold-star">★</span> 5冠達成</div>
+          <div class="sec13-secondary-value">2026年1月 指定領域市場調査</div>
+        </div>
+      </div>
+      
+    </div>
+    
+  </div>
+</section>
+
+<!-- Section 14: Certifications & Mission Banner -->
+<section class="sec14-section">
+  <div class="sec14-container">
+    
+    <!-- 1. Certifications & Awards -->
+    <h2 class="sec14-heading">認証・受賞・調査実績</h2>
+    
+    <div class="sec14-badges-grid">
+      
+      <!-- Badge 1 -->
+      <div class="sec14-badge">
+        <div class="sec14-badge-top">東京商工リサーチ</div>
+        <div class="sec14-badge-bottom">独立系ファクタリング企業<br>売上5年連続No.1</div>
+      </div>
+      
+      <!-- Badge 2 -->
+      <div class="sec14-badge">
+        <div class="sec14-badge-top">日本マーケティング<br>リサーチ機構</div>
+        <div class="sec14-badge-bottom">ファクタリングサービス<br>2026年1月調査 5冠達成</div>
+      </div>
+      
+      <!-- Badge 3 -->
+      <div class="sec14-badge">
+        <div class="sec14-badge-top">JQA</div>
+        <div class="sec14-badge-bottom">ISO/IEC 27001<br>認証取得</div>
+      </div>
+      
+      <!-- Badge 4 -->
+      <div class="sec14-badge">
+        <div class="sec14-badge-top">JIPDEC</div>
+        <div class="sec14-badge-bottom">プライバシーマーク<br>付与事業者</div>
+      </div>
+      
+      <!-- Badge 5 -->
+      <div class="sec14-badge">
+        <div class="sec14-badge-top">Great Place To Work®</div>
+        <div class="sec14-badge-bottom">働きがい認定企業<br>2024年認定</div>
+      </div>
+      
+      <!-- Badge 6 -->
+      <div class="sec14-badge">
+        <div class="sec14-badge-top">健康経営優良法人</div>
+        <div class="sec14-badge-bottom">健康経営優良法人2024<br>中小規模</div>
+      </div>
+      
+    </div>
+    
+    <!-- 2. Mission Statement Banner -->
+    <div class="sec14-mission-banner">
+      <h3 class="sec14-mission-title">日本をつくる中小企業の経営を下支えする。</h3>
+      <div class="sec14-mission-text">
+        <p>
+          ファクタリングは「資金調達の手段」ではなく、「経営の選択肢を広げる伴走パートナー」であるべきだと、PMGは考えます。<br class="sec14-desktop-break">
+          独立系売上 5年連続 No.1 の実績と、全国 10 拠点・統合経営支援(M&A・税理士・コンサル)で、<br class="sec14-desktop-break">
+          経営者の「いま」と「これから」を一緒に支えます。
+        </p>
+      </div>
+      <div class="sec14-mission-signature">— ピーエムジー株式会社 経営理念</div>
+    </div>
+    
+  </div>
+</section>
+
+<!-- Section 15: Bill Abolishment Response Section -->
+<section class="sec15-section">
+  <div class="sec15-container">
+    
+    <!-- Section Header Area -->
+    <div class="sec15-header">
+      <h2 class="sec15-title">2026年度末「約束手形」完全廃止への対応</h2>
+      <p class="sec15-subtitle">中小法人のキャッシュフローに直結する大変革。今から備える方法を解説します。</p>
+    </div>
+    
+    <!-- Main Card Container -->
+    <div class="sec15-card">
+      
+      <!-- Top-Left Floating Ribbon -->
+      <div class="sec15-ribbon">
+        2026年最大の業<span class="sec15-ribbon-red">界</span>変革
+      </div>
+      
+      <!-- Card Title -->
+      <h3 class="sec15-card-title">
+        支払いサイト平均100日が消える時代へ。<br>
+        「手形割引→ファクタリング」への移行をPMGが伴走します。
+      </h3>
+      
+      <!-- Paragraph 1 -->
+      <p class="sec15-text">
+        政府方針により、2026年度末で紙の約束手形が完全に廃止されます(公正取引委員会・中小企業庁ガイダンス)。これまで「支払いサイト平均100日(=現金化まで3ヶ月待ち)」が前提だった中小法人のキャッシュフロー対策は、「でんさい(電子記録債権)」または「ファクタリング」へのシフトが必要です。
+      </p>
+      
+      <!-- Paragraph 2 with highlighted span -->
+      <p class="sec15-text">
+        でんさいは取引先がでんさいネット非対応の場合は使えないため、<span class="sec15-highlight">取引先に依存しないファクタリングが現実的な代替手段</span>になります。PMGは「電子記録債権」「手形割引との違い」「移行スケジュール」まで含めた個別相談を承っています。
+      </p>
+      
+      <!-- Action Buttons -->
+      <div class="sec15-buttons">
+        <button class="sec15-btn-solid">廃止対応の相談をする</button>
+        <button class="sec15-btn-outline">手形廃止対応ガイド(PDF)</button>
+      </div>
+      
+    </div>
+    
+  </div>
+</section>
+
+<!-- Section 16: Customer Feedback/Testimonials -->
+<section class="sec16-section">
+  <div class="sec16-container">
+    
+    <!-- Top Header Area -->
+    <div class="sec16-header">
+      <div class="sec16-header-text">
+        <h2 class="sec16-title">お客様アンケートに寄せられた声</h2>
+        <p class="sec16-subtitle">
+          企業の成長段階・業種・資金使途に応じて、<br>
+          経験豊富なPMGスタッフが最適なファクタリングの活用方法をご提案します。
+        </p>
+      </div>
+      <div class="sec16-header-image">
+        <img src="assets/sec16-top.png" alt="Person writing on a checklist">
+      </div>
+    </div>
+    
+    <!-- Testimonial Cards Grid -->
+    <div class="sec16-cards-grid">
+      
+      <!-- Card 1 -->
+      <div class="sec16-card">
+        <h3 class="sec16-card-title">対応が早くてよかった</h3>
+        <p class="sec16-card-text">
+          工期遅れによる資金繰り課題を抱えていた建設業の声です。PMGを選んだ決め手として「スピード」が挙げられており、利用後には対応の早さに満足した声が寄せられています。
+        </p>
+        <div class="sec16-card-divider"></div>
+        <div class="sec16-card-footer">
+          <div class="sec16-avatar">
+            <img src="assets/sec16-icon.png" alt="User avatar">
+          </div>
+          <div class="sec16-user-info">
+            <div class="sec16-user-top">建設業 / 千葉県</div>
+            <div class="sec16-user-bottom">年商：10億 / 選定理由：スピード感</div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Card 2 -->
+      <div class="sec16-card">
+        <h3 class="sec16-card-title">安心して利用できております</h3>
+        <p class="sec16-card-text">
+          一部入金のズレにより、急遽資金調達が必要となった運送業の声です。PMGを選んだ理由として、ホームページを見て信頼感を持ったことが挙げられており、担当者の対応も安心感につながっています。
+        </p>
+        <div class="sec16-card-divider"></div>
+        <div class="sec16-card-footer">
+          <div class="sec16-avatar">
+            <img src="assets/sec16-icon.png" alt="User avatar">
+          </div>
+          <div class="sec16-user-info">
+            <div class="sec16-user-top">運送業 / 神奈川県</div>
+            <div class="sec16-user-bottom">年商：4億 / 選定理由：ホームページの信頼感</div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Card 3 -->
+      <div class="sec16-card">
+        <h3 class="sec16-card-title">非常に便利に利用</h3>
+        <p class="sec16-card-text">
+          原料の値上げが続いていた製造業の声です。PMGを選んだ決め手として、他社比較の中で良い選択肢が見つからなかったことが挙げられており、利用後には継続的な原料値上がりの中で便利に活用している声が寄せられています。
+        </p>
+        <div class="sec16-card-divider"></div>
+        <div class="sec16-card-footer">
+          <div class="sec16-avatar">
+            <img src="assets/sec16-icon.png" alt="User avatar">
+          </div>
+          <div class="sec16-user-info">
+            <div class="sec16-user-top">製造業 / 東京都</div>
+            <div class="sec16-user-bottom">年商：5億 / 選定理由：他社比較</div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    
+  </div>
+</section>
+
+<!-- Section 17: Frequently Asked Questions (FAQ) -->
+<section class="sec17-section">
+  <div class="sec17-container">
+    
+    <!-- Header Area -->
+    <div class="sec17-header">
+      <h2 class="sec17-title">お申込み前のよくあるご質問</h2>
+      <p class="sec17-subtitle">必要書類・審査時間・手数料・違法性まで、事前にご確認ください。</p>
+    </div>
+    
+    <!-- FAQ Accordion List -->
+    <div class="sec17-faq-list">
+      
+      <!-- Q1 -->
+      <details class="sec17-faq-item" open>
+        <summary class="sec17-faq-question">
+          <span class="sec17-q-num">Q1</span>
+          <span class="sec17-q-tag">必要書類</span>
+          <span class="sec17-q-text">申込みに必要な書類は何ですか？</span>
+          <span class="sec17-toggle-icon"></span>
+        </summary>
+        <div class="sec17-faq-answer">
+          <p>審査時には、①口座の入出金履歴（直近3か月分）②売掛金に関する書類（請求書・契約書など） の書類が必要です。</p>
+          <p>※審査状況により、追加で審査書類のご提出をお願いする場合がございます。ご了承ください。</p>
+        </div>
+      </details>
+      
+      <!-- Q2 -->
+      <details class="sec17-faq-item">
+        <summary class="sec17-faq-question">
+          <span class="sec17-q-num">Q2</span>
+          <span class="sec17-q-tag">審査時間</span>
+          <span class="sec17-q-text">審査にはどのくらい時間がかかりますか？</span>
+          <span class="sec17-toggle-icon"></span>
+        </summary>
+        <div class="sec17-faq-answer">
+          <p>必要書類をご提出いただいた後、審査・お見積りは最短30分でご案内可能です。</p>
+          <p>お見積り内容に問題がなければ契約へ進み、契約後は指定口座への振込手続きとなります。申込から入金までは最短即日で対応可能です。</p>
+        </div>
+      </details>
+      
+      <!-- Q3 -->
+      <details class="sec17-faq-item">
+        <summary class="sec17-faq-question">
+          <span class="sec17-q-num">Q3</span>
+          <span class="sec17-q-tag">手数料</span>
+          <span class="sec17-q-text">手数料の相場はどれくらいですか？</span>
+          <span class="sec17-toggle-icon"></span>
+        </summary>
+        <div class="sec17-faq-answer">
+          <p>手数料は、契約形態・売掛先の信用力・売掛金額などによって異なります。</p>
+          <p>買取額と売買手数料は、審査後にご案内します。</p>
+        </div>
+      </details>
+      
+      <!-- Q4 -->
+      <details class="sec17-faq-item">
+        <summary class="sec17-faq-question">
+          <span class="sec17-q-num">Q4</span>
+          <span class="sec17-q-tag">赤字決算</span>
+          <span class="sec17-q-text">赤字決算・税金滞納でも利用できますか？</span>
+          <span class="sec17-toggle-icon"></span>
+        </summary>
+        <div class="sec17-faq-answer">
+          <p>赤字決算の場合でもご利用いただけます。</p>
+          <p>売掛先企業や商取引の内容を重視して審査を行います。</p>
+          <p>税金・社会保険料の滞納がある場合は、滞納金額や期間によって判断が異なりますので、まずは一度ご相談ください。</p>
+        </div>
+      </details>
+      
+      <!-- Q5 -->
+      <details class="sec17-faq-item">
+        <summary class="sec17-faq-question">
+          <span class="sec17-q-num">Q5</span>
+          <span class="sec17-q-tag">2社間/3社間</span>
+          <span class="sec17-q-text">2社間と3社間の違いは何ですか？</span>
+          <span class="sec17-toggle-icon"></span>
+        </summary>
+        <div class="sec17-faq-answer">
+          <p>赤字決算の場合でもご利用いただけます。</p>
+          <p>売掛先企業や商取引の内容を重視して審査を行います。</p>
+          <p>税金・社会保険料の滞納がある場合は、滞納金額や期間によって判断が異なりますので、まずは一度ご相談ください。</p>
+        </div>
+      </details>
+      
+      <!-- Q6 -->
+      <details class="sec17-faq-item">
+        <summary class="sec17-faq-question">
+          <span class="sec17-q-num">Q6</span>
+          <span class="sec17-q-tag">違法性</span>
+          <span class="sec17-q-text">ファクタリングは違法ですか？ヤミ金との違いは？</span>
+          <span class="sec17-toggle-icon"></span>
+        </summary>
+        <div class="sec17-faq-answer">
+          <p>ファクタリングは、売掛債権を売買する資金調達方法です。</p>
+          <p>融資ではないため、利息ではなく売買手数料が発生します。</p>
+          <p>一方で、売掛金の売買を装いながら実質的に貸付を行う業者や、不透明な契約を求める業者には注意が必要です。</p>
+          <p>契約内容・手数料・償還請求権の有無などを事前に確認することが大切です。</p>
+        </div>
+      </details>
+      
+      <!-- Q7 -->
+      <details class="sec17-faq-item">
+        <summary class="sec17-faq-question">
+          <span class="sec17-q-num">Q7</span>
+          <span class="sec17-q-tag">対応エリア(他)</span>
+          <span class="sec17-q-text">地方ですが対応可能ですか？</span>
+          <span class="sec17-toggle-icon"></span>
+        </summary>
+        <div class="sec17-faq-answer">
+          <p>日本全国に対応しています。</p>
+          <p>地方の企業様からのご相談も可能です。</p>
+          <p>一部エリアではWeb会議での対応となる場合がありますが、お問い合わせ内容に応じて担当者よりご案内します。</p>
+        </div>
+      </details>
+      
+      <!-- Q8 -->
+      <details class="sec17-faq-item">
+        <summary class="sec17-faq-question">
+          <span class="sec17-q-num">Q8</span>
+          <span class="sec17-q-tag">業種</span>
+          <span class="sec17-q-text">建設業・医療・運送業など特殊な業種にも対応していますか？</span>
+          <span class="sec17-toggle-icon"></span>
+        </summary>
+        <div class="sec17-faq-answer">
+          <p>対応しています。</p>
+          <p>建設業、運送業、製造業、卸売業、IT業、医療業界など、幅広い業種でご利用いただけます。</p>
+          <p>業種ごとの売掛サイクルや資金需要に応じて、適した活用方法をご提案します。</p>
+        </div>
+      </details>
+      
+    </div>
+    
+    <!-- Section Footnote -->
+    <p class="sec17-footnote">
+      ※審査結果・買取条件・入金時期・手数料は、売掛先・契約内容・必要書類の状況により異なります。
+    </p>
+    
+  </div>
+</section>
+
+<!-- Section 18: Final CTA Banner -->
+<section class="sec18-section">
+  <div class="sec18-container">
+    
+    <!-- Top Heading -->
+    <h2 class="sec18-heading">
+      あなたの会社の資金繰りを<span class="sec18-underline">最短30分</span>で解決します
+    </h2>
+    
+    <!-- Action Buttons Container -->
+    <div class="sec18-buttons">
+      
+      <!-- Left Button (Red/Form) -->
+      <button class="sec18-btn sec18-btn-red">
+        <span class="sec18-btn-top">フォームで無料相談</span>
+        <span class="sec18-btn-bottom">365日24時間対応</span>
+      </button>
+      
+      <!-- Right Button (Green/Phone) -->
+      <button class="sec18-btn sec18-btn-green">
+        <span class="sec18-btn-top">電話で今すぐ相談</span>
+        <span class="sec18-phone-number">0120-901-680</span>
+        <span class="sec18-btn-bottom">8:00〜20:00 / 土日対応</span>
+      </button>
+      
+    </div>
+    
+    <!-- Bottom Footnote -->
+    <p class="sec18-footnote">
+      独立系売上 5年連続 No.1 のPMGに、まずは無料相談を。<br>
+      しつこい営業電話は一切いたしません。
+    </p>
+    
+  </div>
+</section>
+
+<!-- Section 19: Footer -->
+<footer class="sec19-footer">
+  <div class="sec19-container">
+    
+    <!-- Company Logo -->
+    <div class="sec19-logo">
+      <img src="assets/logo1.png" alt="PMG株式会社">
+    </div>
+    
+    <!-- Company Description -->
+    <div class="sec19-description">
+      ピーエムジー株式会社は、独立系ファクタリング売上 5年連続 No.1(東京商工リサーチ調べ)の中小〜中堅法人向け資金調達パートナーです。<br>
+      中小企業支援機構として、ファクタリングだけでなくM&A・税理士マッチング・経営改善まで統合的にサポートします。
+    </div>
+    
+    <!-- Location Information -->
+    <div class="sec19-location">
+      本社：東京都新宿区　全国10拠点(東京/大阪/福岡/札幌/仙台/さいたま/千葉/横浜/名古屋/広島)
+    </div>
+    
+    <!-- Footer Navigation Links -->
+    <div class="sec19-nav-links">
+      <a href="#" class="sec19-link">運営会社</a>
+      <a href="#" class="sec19-link">利用規約</a>
+    </div>
+    
+    <!-- Copyright -->
+    <div class="sec19-copyright">
+      © 2026 ピーエムジー株式会社
+    </div>
+    
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+<script src="js/sec2.js"></script>
+</body>
+</html>
