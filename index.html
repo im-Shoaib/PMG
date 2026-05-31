@@ -662,7 +662,7 @@
 <section class="sec7-section" id="comparison">
   <div class="sec7-container">
     
-    <!-- 1. Top CTA Banner -->
+    <!-- 1. Top CTA Banner (unchanged) -->
     <div class="sec7-cta-banner">
       <h2 class="sec7-cta-title">あなたの会社にPMGが合うか確認できます</h2>
       <p class="sec7-cta-subtitle">無料相談・しつこい営業電話なし・個人情報厳重管理</p>
@@ -675,12 +675,14 @@
       </div>
     </div>
     
-    <!-- 2. Section Header (Comparison Title) -->
+    <!-- 2. Section Header (unchanged) -->
     <div class="sec7-comparison-header">
-      <div class="sec7-badge">
-        <span class="sec7-badge-text">徹底</span><span class="sec7-badge-text-red">比較</span>
-      </div>
+      
       <h3 class="sec7-main-title">
+        <div class="sec7-badge">
+        <span class="sec7-badge-text">徹底</span><span class="sec7-badge-text-red">比</span>
+        <span class="sec7-badge-text">較</span>
+      </div>
         中堅法人の最適解は<span class="sec7-highlight-red">PMG</span>
       </h3>
       <p class="sec7-sub-description">
@@ -688,201 +690,219 @@
       </p>
     </div>
     
-    <!-- 3. Comparison Table (scrollable on mobile) -->
+    <!-- 3. Comparison Table (Grid‑based, fully responsive) -->
     <div class="sec7-table-wrapper">
-      <table class="sec7-comparison-table">
-        <thead>
-          <tr>
-            <th class="sec7-corner-cell"></th>
-            <th class="sec7-pmg-col-header"><img src="assets/logo.png" alt="PMG logo"></th>
-            <th>フィンテック系<br><span class="sec7-small-text">(QuQuMo / 株式会社No.1 等)</span></th>
-            <th>銀行系・上場系<br><span class="sec7-small-text">(GMO BtoB / 三井住友F&L)</span></th>
-            <th>業種特化系<br><span class="sec7-small-text">(けんせつくん等)</span></th>
-          </tr>
-        </thead>
-        <tbody>
-          <!-- Row 1: 入金スピード -->
-          <tr>
-            <td class="sec7-row-label">入金スピード</td>
-            <td class="sec7-pmg-cell">
-              <div class="cell-icon icon-red-double">◎</div>
-              <div class="cell-text">最短30分</div>
-            </td>
-            <td>
-              <div class="cell-icon icon-red-double">◎</div>
-              <div class="cell-text">最短10〜30分</div>
-            </td>
-            <td>
-              <div class="cell-icon icon-blue-cross">✕</div>
-              <div class="cell-text">2〜5営業日</div>
-            </td>
-            <td>
-              <div class="cell-icon icon-green-single">◯</div>
-              <div class="cell-text">最短2時間〜翌日</div>
-            </td>
-          </tr>
-          <!-- Row 2: 買取上限 -->
-          <tr>
-            <td class="sec7-row-label">買取上限</td>
-            <td class="sec7-pmg-cell">
-              <div class="cell-icon icon-red-double">◎</div>
-              <div class="cell-text">3億円</div>
-            </td>
-            <td>
-              <div class="cell-icon icon-green-single">◯</div>
-              <div class="cell-text">制限なし(実態1億未満)</div>
-            </td>
-            <td>
-              <div class="cell-icon icon-red-double">◎</div>
-              <div class="cell-text">1〜2億円(超大口可)</div>
-            </td>
-            <td>
-              <div class="cell-icon icon-green-single">◯</div>
-              <div class="cell-text">5,000万〜1億円</div>
-            </td>
-          </tr>
-          <!-- Row 3: 2社間/3社間 -->
-          <tr>
-            <td class="sec7-row-label">2社間/3社間</td>
-            <td class="sec7-pmg-cell">
-              <div class="cell-icon icon-red-double">◎</div>
-              <div class="cell-text">両対応</div>
-            </td>
-            <td>
-              <div class="cell-icon icon-green-single">◯</div>
-              <div class="cell-text">2社間中心</div>
-            </td>
-            <td>
-              <div class="cell-icon icon-yellow-triangle">△</div>
-              <div class="cell-text">3社間中心</div>
-            </td>
-            <td>
-              <div class="cell-icon icon-yellow-triangle">△</div>
-              <div class="cell-text">両対応</div>
-            </td>
-          </tr>
-          <!-- Row 4: 取引先非通知 -->
-          <tr>
-            <td class="sec7-row-label">取引先非通知</td>
-            <td class="sec7-pmg-cell">
-              <div class="cell-icon icon-red-double">◎</div>
-              <div class="cell-text">可能</div>
-            </td>
-            <td>
-              <div class="cell-icon icon-red-double">◎</div>
-              <div class="cell-text">可能</div>
-            </td>
-            <td>
-              <div class="cell-icon icon-blue-cross">✕</div>
-              <div class="cell-text">通知必要</div>
-            </td>
-            <td>
-              <div class="cell-icon icon-red-double">◎</div>
-              <div class="cell-text">可能</div>
-            </td>
-          </tr>
-          <!-- Row 5: 全国拠点数 -->
-          <tr>
-            <td class="sec7-row-label">全国拠点数</td>
-            <td class="sec7-pmg-cell">
-              <div class="cell-icon icon-red-double">◎</div>
-              <div class="cell-text">10拠点</div>
-            </td>
-            <td>
-              <div class="cell-icon icon-yellow-triangle">△</div>
-              <div class="cell-text">1〜3拠点</div>
-            </td>
-            <td>
-              <div class="cell-icon icon-blue-cross">✕</div>
-              <div class="cell-text">本社のみ</div>
-            </td>
-            <td>
-              <div class="cell-icon icon-yellow-triangle">△</div>
-              <div class="cell-text">1〜2拠点</div>
-            </td>
-          </tr>
-          <!-- Row 6: 対面相談 -->
-          <tr>
-            <td class="sec7-row-label">対面相談</td>
-            <td class="sec7-pmg-cell">
-              <div class="cell-icon icon-red-double">◎</div>
-              <div class="cell-text">全国対応</div>
-            </td>
-            <td>
-              <div class="cell-icon icon-blue-cross">✕</div>
-              <div class="cell-text">オンライン中心</div>
-            </td>
-            <td>
-              <div class="cell-icon icon-yellow-triangle">△</div>
-              <div class="cell-text">大口のみ</div>
-            </td>
-            <td>
-              <div class="cell-icon icon-yellow-triangle">△</div>
-              <div class="cell-text">業種限定</div>
-            </td>
-          </tr>
-          <!-- Row 7: 個人事業主 -->
-          <tr>
-            <td class="sec7-row-label">個人事業主</td>
-            <td class="sec7-pmg-cell">
-              <div class="cell-icon icon-red-double">◎</div>
-              <div class="cell-text">可</div>
-            </td>
-            <td>
-              <div class="cell-icon icon-red-double">◎</div>
-              <div class="cell-text">可</div>
-            </td>
-            <td>
-              <div class="cell-icon icon-blue-cross">✕</div>
-              <div class="cell-text">不可</div>
-            </td>
-            <td>
-              <div class="cell-icon icon-red-double">◎</div>
-              <div class="cell-text">可</div>
-            </td>
-          </tr>
-          <!-- Row 8: 統合経営支援 -->
-          <tr>
-            <td class="sec7-row-label">統合経営支援</td>
-            <td class="sec7-pmg-cell">
-              <div class="cell-text">8サービス</div>
-            </td>
-            <td>- なし</td>
-            <td>- なし</td>
-            <td>- なし</td>
-          </tr>
-          <!-- Row 9: 第三者調査根拠 -->
-          <tr>
-            <td class="sec7-row-label">第三者調査根拠</td>
-            <td class="sec7-pmg-cell">
-              <div class="cell-text">東商 5年連続No.1</div>
-            </td>
-            <td>なし</td>
-            <td>上場ブランド</td>
-            <td>業界実績</td>
-          </tr>
-          <!-- Row 10: 赤字決算の審査 -->
-          <tr>
-            <td class="sec7-row-label">赤字決算の審査</td>
-            <td class="sec7-pmg-cell">
-              <div class="cell-icon icon-red-double">◎</div>
-              <div class="cell-text">柔軟対応</div>
-            </td>
-            <td>
-              <div class="cell-icon icon-yellow-triangle">△</div>
-              <div class="cell-text">AI審査次第</div>
-            </td>
-            <td>
-              <div class="cell-icon icon-blue-cross">✕</div>
-              <div class="cell-text">厳格</div>
-            </td>
-            <td>
-              <div class="cell-icon icon-green-single">◯</div>
-              <div class="cell-text">業種次第</div>
-            </td>
-          </tr>
-        </tbody>
-       </table>
+      <div class="sec7-grid-table">
+        
+        <!-- Header Row -->
+        <div class="sec7-grid-row sec7-header-row">
+          <div class="sec7-grid-cell sec7-corner-cell"></div>
+          <div class="sec7-grid-cell sec7-pmg-col-header">
+            <img src="assets/logo.png" alt="PMG logo">
+          </div>
+          <div class="sec7-grid-cell">
+            フィンテック系<br><span class="sec7-small-text">(QuQuMo / 株式会社No.1 等)</span>
+          </div>
+          <div class="sec7-grid-cell">
+            銀行系・上場系<br><span class="sec7-small-text">(GMO BtoB / 三井住友F&L)</span>
+          </div>
+          <div class="sec7-grid-cell">
+            業種特化系<br><span class="sec7-small-text">(けんせつくん等)</span>
+          </div>
+        </div>
+        
+        <!-- Data Rows (10 rows) -->
+        <!-- Row 1 -->
+        <div class="sec7-grid-row">
+          <div class="sec7-grid-cell sec7-row-label">入金スピード</div>
+          <div class="sec7-grid-cell sec7-pmg-cell">
+            <div class="cell-icon icon-red-double">◎</div>
+            <div class="cell-text">最短30分</div>
+          </div>
+          <div class="sec7-grid-cell">
+            <div class="cell-icon icon-red-double">◎</div>
+            <div class="cell-text">最短10〜30分</div>
+          </div>
+          <div class="sec7-grid-cell">
+            <div class="cell-icon icon-blue-cross">✕</div>
+            <div class="cell-text">2〜5営業日</div>
+          </div>
+          <div class="sec7-grid-cell">
+            <div class="cell-icon icon-green-single">◯</div>
+            <div class="cell-text">最短2時間〜翌日</div>
+          </div>
+        </div>
+        
+        <!-- Row 2 -->
+        <div class="sec7-grid-row">
+          <div class="sec7-grid-cell sec7-row-label">買取上限</div>
+          <div class="sec7-grid-cell sec7-pmg-cell">
+            <div class="cell-icon icon-red-double">◎</div>
+            <div class="cell-text">3億円</div>
+          </div>
+          <div class="sec7-grid-cell">
+            <div class="cell-icon icon-green-single">◯</div>
+            <div class="cell-text">制限なし(実態1億未満)</div>
+          </div>
+          <div class="sec7-grid-cell">
+            <div class="cell-icon icon-red-double">◎</div>
+            <div class="cell-text">1〜2億円(超大口可)</div>
+          </div>
+          <div class="sec7-grid-cell">
+            <div class="cell-icon icon-green-single">◯</div>
+            <div class="cell-text">5,000万〜1億円</div>
+          </div>
+        </div>
+        
+        <!-- Row 3 -->
+        <div class="sec7-grid-row">
+          <div class="sec7-grid-cell sec7-row-label">2社間/3社間</div>
+          <div class="sec7-grid-cell sec7-pmg-cell">
+            <div class="cell-icon icon-red-double">◎</div>
+            <div class="cell-text">両対応</div>
+          </div>
+          <div class="sec7-grid-cell">
+            <div class="cell-icon icon-green-single">◯</div>
+            <div class="cell-text">2社間中心</div>
+          </div>
+          <div class="sec7-grid-cell">
+            <div class="cell-icon icon-yellow-triangle">△</div>
+            <div class="cell-text">3社間中心</div>
+          </div>
+          <div class="sec7-grid-cell">
+            <div class="cell-icon icon-yellow-triangle">△</div>
+            <div class="cell-text">両対応</div>
+          </div>
+        </div>
+        
+        <!-- Row 4 -->
+        <div class="sec7-grid-row">
+          <div class="sec7-grid-cell sec7-row-label">取引先非通知</div>
+          <div class="sec7-grid-cell sec7-pmg-cell">
+            <div class="cell-icon icon-red-double">◎</div>
+            <div class="cell-text">可能</div>
+          </div>
+          <div class="sec7-grid-cell">
+            <div class="cell-icon icon-red-double">◎</div>
+            <div class="cell-text">可能</div>
+          </div>
+          <div class="sec7-grid-cell">
+            <div class="cell-icon icon-blue-cross">✕</div>
+            <div class="cell-text">通知必要</div>
+          </div>
+          <div class="sec7-grid-cell">
+            <div class="cell-icon icon-red-double">◎</div>
+            <div class="cell-text">可能</div>
+          </div>
+        </div>
+        
+        <!-- Row 5 -->
+        <div class="sec7-grid-row">
+          <div class="sec7-grid-cell sec7-row-label">全国拠点数</div>
+          <div class="sec7-grid-cell sec7-pmg-cell">
+            <div class="cell-icon icon-red-double">◎</div>
+            <div class="cell-text">10拠点</div>
+          </div>
+          <div class="sec7-grid-cell">
+            <div class="cell-icon icon-yellow-triangle">△</div>
+            <div class="cell-text">1〜3拠点</div>
+          </div>
+          <div class="sec7-grid-cell">
+            <div class="cell-icon icon-blue-cross">✕</div>
+            <div class="cell-text">本社のみ</div>
+          </div>
+          <div class="sec7-grid-cell">
+            <div class="cell-icon icon-yellow-triangle">△</div>
+            <div class="cell-text">1〜2拠点</div>
+          </div>
+        </div>
+        
+        <!-- Row 6 -->
+        <div class="sec7-grid-row">
+          <div class="sec7-grid-cell sec7-row-label">対面相談</div>
+          <div class="sec7-grid-cell sec7-pmg-cell">
+            <div class="cell-icon icon-red-double">◎</div>
+            <div class="cell-text">全国対応</div>
+          </div>
+          <div class="sec7-grid-cell">
+            <div class="cell-icon icon-blue-cross">✕</div>
+            <div class="cell-text">オンライン中心</div>
+          </div>
+          <div class="sec7-grid-cell">
+            <div class="cell-icon icon-yellow-triangle">△</div>
+            <div class="cell-text">大口のみ</div>
+          </div>
+          <div class="sec7-grid-cell">
+            <div class="cell-icon icon-yellow-triangle">△</div>
+            <div class="cell-text">業種限定</div>
+          </div>
+        </div>
+        
+        <!-- Row 7 -->
+        <div class="sec7-grid-row">
+          <div class="sec7-grid-cell sec7-row-label">個人事業主</div>
+          <div class="sec7-grid-cell sec7-pmg-cell">
+            <div class="cell-icon icon-red-double">◎</div>
+            <div class="cell-text">可</div>
+          </div>
+          <div class="sec7-grid-cell">
+            <div class="cell-icon icon-red-double">◎</div>
+            <div class="cell-text">可</div>
+          </div>
+          <div class="sec7-grid-cell">
+            <div class="cell-icon icon-blue-cross">✕</div>
+            <div class="cell-text">不可</div>
+          </div>
+          <div class="sec7-grid-cell">
+            <div class="cell-icon icon-red-double">◎</div>
+            <div class="cell-text">可</div>
+          </div>
+        </div>
+        
+        <!-- Row 8 -->
+        <div class="sec7-grid-row">
+          <div class="sec7-grid-cell sec7-row-label">統合経営支援</div>
+          <div class="sec7-grid-cell sec7-pmg-cell">
+            <div class="cell-text">8サービス</div>
+          </div>
+          <div class="sec7-grid-cell">- なし</div>
+          <div class="sec7-grid-cell">- なし</div>
+          <div class="sec7-grid-cell">- なし</div>
+        </div>
+        
+        <!-- Row 9 -->
+        <div class="sec7-grid-row">
+          <div class="sec7-grid-cell sec7-row-label">第三者調査根拠</div>
+          <div class="sec7-grid-cell sec7-pmg-cell">
+            <div class="cell-text">東商 5年連続No.1</div>
+          </div>
+          <div class="sec7-grid-cell">なし</div>
+          <div class="sec7-grid-cell">上場ブランド</div>
+          <div class="sec7-grid-cell">業界実績</div>
+        </div>
+        
+        <!-- Row 10 -->
+        <div class="sec7-grid-row">
+          <div class="sec7-grid-cell sec7-row-label">赤字決算の審査</div>
+          <div class="sec7-grid-cell sec7-pmg-cell">
+            <div class="cell-icon icon-red-double">◎</div>
+            <div class="cell-text">柔軟対応</div>
+          </div>
+          <div class="sec7-grid-cell">
+            <div class="cell-icon icon-yellow-triangle">△</div>
+            <div class="cell-text">AI審査次第</div>
+          </div>
+          <div class="sec7-grid-cell">
+            <div class="cell-icon icon-blue-cross">✕</div>
+            <div class="cell-text">厳格</div>
+          </div>
+          <div class="sec7-grid-cell">
+            <div class="cell-icon icon-green-single">◯</div>
+            <div class="cell-text">業種次第</div>
+          </div>
+        </div>
+        
+      </div>
     </div>
     
   </div>

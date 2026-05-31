@@ -1699,9 +1699,9 @@ section[id] {
   padding: 12px 0;
   text-align: center;
   font-family: 'Noto Sans JP', sans-serif;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 14px;
-  color: #333333;
+  color: #2B2B2B;
   transition: all 0.2s ease;
 }
 
@@ -1750,24 +1750,33 @@ section[id] {
   align-items: flex-start;
   gap: 8px;
   font-family: 'Noto Sans JP', sans-serif;
-  font-weight: 400;
+  font-weight: 600;
   font-size: 14px;
   line-height: 1.4;
-  color: #444444;
+  color: #2B2B2B;
   margin-bottom: 14px;
   position: relative;
   padding-left: 24px;
 }
 
 /* Checkmark icon using pseudo-element */
+
 .sec5-cases-list li::before {
   content: "✓";
   position: absolute;
   left: 0;
-  top: 0;
-  color: #7A1A14;
+  top: 2px; /* adjust for vertical alignment */
+  width: 18px;
+  height: 18px;
+  background-color: #72221C;
+  border-radius: 3px; /* slightly rounded corners */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 12px;
+  line-height: 1;
 }
 
 /* ----- Mobile Layout (max-width: 768px) ----- */
@@ -2384,7 +2393,7 @@ section[id] {
   opacity: 0.9;
 }
 
-/* ---------- 2. Section Header (Comparison Title) ---------- */
+/* ---------- 2. Section Header ---------- */
 .sec7-comparison-header {
   text-align: center;
   margin-bottom: 40px;
@@ -2394,8 +2403,7 @@ section[id] {
   display: inline-block;
   background: #333333;
   clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
-  padding: 0px 24px 4px 16px;
-  margin-bottom: 20px;
+  padding: 0px 50px 8px 40px;
 }
 
 .sec7-badge-text {
@@ -2416,7 +2424,7 @@ section[id] {
   font-family: 'Noto Sans JP', sans-serif;
   font-weight: 700;
   font-size: 28px;
-  color: #1a1a1a;
+  color: #C1291F;
   margin: 0 0 16px 0;
 }
 
@@ -2432,101 +2440,128 @@ section[id] {
   margin: 0;
 }
 
-/* ---------- 3. Comparison Table ---------- */
+/* ---------- 3. Comparison Table (Grid‑based) ---------- */
 .sec7-table-wrapper {
   overflow-x: auto;
+  overflow-y: visible;
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  
+  padding: 20px 0; /* increased to give room for protruding column */
 }
 
-.sec7-comparison-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-family: 'Noto Sans JP', sans-serif;
-  font-size: 13px;
+.sec7-grid-table {
+  display: flex;
+  flex-direction: column;
   min-width: 800px;
+  background-color: #FFFFFF;
+  border: 1px solid #EAEAEA;
+  border-radius: 12px;
+  position: relative;
+  /* Removed overflow: hidden so the protruding column is not clipped */
 }
 
-.sec7-comparison-table th,
-.sec7-comparison-table td {
-  border: 1px solid #EAEAEA;
-  padding: 14px 12px;
-  text-align: center;
-  vertical-align: middle;
+.sec7-grid-row {
+  display: grid;
+  grid-template-columns: 1.2fr 1.5fr 1.2fr 1.2fr 1.2fr;
+  border-bottom: 1px solid #EAEAEA;
   background-color: #FFFFFF;
 }
 
-/* Header cells (except PMG column) - dark maroon background */
-.sec7-comparison-table th {
+.sec7-header-row {
+  background-color: #631B18;
+  border-bottom: none;
+}
+
+.sec7-grid-cell {
+  padding: 14px 12px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 13px;
+  color: #333333;
+  border-right: 1px solid #EAEAEA;
+}
+
+.sec7-grid-cell:last-child {
+  border-right: none;
+}
+
+/* Header cell borders – visible dividers */
+.sec7-header-row .sec7-grid-cell {
   background-color: #631B18;
   color: #FFFFFF;
   font-weight: 700;
   font-size: 14px;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+.sec7-header-row .sec7-grid-cell:first-child {
+  border-left: none;
+}
+.sec7-header-row .sec7-grid-cell:last-child {
+  border-right: none;
 }
 
-/* Top-left empty cell */
 .sec7-corner-cell {
   background-color: #631B18;
-  border: 1px solid #EAEAEA;
 }
 
-/* PMG Header Column - pinkish background + gold border */
-.sec7-pmg-col-header {
-  background-color: #FFF5F5 !important;
-  color: var(--main, #C1291F) !important;
-  border-left: 2px solid #C49A45;
-  border-right: 2px solid #C49A45;
-  position: relative;
-  z-index: 2;
-  box-shadow: 0px 4px 15px rgba(196, 154, 69, 0.3);
-}
-/* PMG Data Cells - pinkish background + gold border */
-.sec7-pmg-cell {
-  background-color: #FFF5F5 !important;
-  color: var(--main, #C1291F);
-  font-weight: 700;
-  border-left: 2px solid #C49A45;
-  border-right: 2px solid #C49A45;
-  position: relative;
-  z-index: 2;
-  box-shadow: 0px 4px 15px rgba(196, 154, 69, 0.3);
-}
-
-/* PMG Header Column - pinkish background + gradient border */
-.sec7-pmg-col-header,
-.sec7-pmg-cell {
-  background-color: #FFF5F5 !important;
-  color: var(--main, #C1291F) !important;
-  border-left: 3px solid;
-  border-right: 3px solid;
-  border-image-source: linear-gradient(180deg, #F9FAEB 0%, #FAE9B7 100%);
-  border-image-slice: 1;
-  border-image-repeat: stretch;
-  position: relative;
-  z-index: 2;
-  box-shadow: 0px 4px 15px rgba(196, 154, 69, 0.3);
-}
-
-/* Row Labels (first column) - sticky for mobile */
+/* First column – white background, centered text */
 .sec7-row-label {
-  background-color: #F9F9F9;
+  background-color: #FFFFFF;
   font-weight: 600;
-  text-align: left;
-  position: static;
+  text-align: center;
+  position: sticky;
   left: 0;
   z-index: 5;
 }
 
-/* Small text in headers */
-.sec7-small-text {
-  font-size: 10px;
-  font-weight: normal;
-  display: block;
-  margin-top: 4px;
-  opacity: 0.9;
+/* ---------- PMG COLUMN (2nd column) – Prominent Floating Effect ---------- */
+.sec7-grid-row .sec7-grid-cell:nth-child(2) {
+  background-color: #FFF5F5 !important;
+  border-left: 3px solid;
+  border-right: 3px solid;
+  border-top: none;
+  border-bottom: none;
+  border-image-source: linear-gradient(146.31deg, #F9FAEB 6.75%, #F8F8E8 21.72%, #F5F3DF 32.2%, #F1EAD1 39.68%, #EBDEBC 47.17%, #E3CEA1 53.15%, #D8B77A 60.64%, #C4A167 68.12%, #A07842 83.09%, #895F2C 95.06%, #815624 101.05%, #B18841 130.98%, #AA803B 145.95%, #FAE9B7 156.43%);
+  border-image-slice: 1;
+  border-image-repeat: stretch;
+  position: relative;
+  z-index: 20;
+  box-shadow: 0px 12px 28px rgba(0, 0, 0, 0.2); /* stronger shadow for prominence */
+  color: #C1291F !important;
+  font-weight: 700 !important;
 }
 
-/* Icon container - vertical layout */
+/* Top cell – add top border + protrude upward more */
+.sec7-header-row .sec7-grid-cell:nth-child(2) {
+  border-top: 3px solid;
+  border-image-source: linear-gradient(146.31deg, #F9FAEB 6.75%, #F8F8E8 21.72%, #F5F3DF 32.2%, #F1EAD1 39.68%, #EBDEBC 47.17%, #E3CEA1 53.15%, #D8B77A 60.64%, #C4A167 68.12%, #A07842 83.09%, #895F2C 95.06%, #815624 101.05%, #B18841 130.98%, #AA803B 145.95%, #FAE9B7 156.43%);
+  border-image-slice: 1;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  margin-top: -20px; /* increased protrusion */
+  padding-top: calc(14px + 20px);
+  background-color: #FFF5F5 !important;
+  color: #C1291F !important;
+}
+
+/* Bottom cell – add bottom border + protrude downward more */
+.sec7-grid-row:last-child .sec7-grid-cell:nth-child(2) {
+  border-bottom: 3px solid;
+  border-image-source: linear-gradient(146.31deg, #F9FAEB 6.75%, #F8F8E8 21.72%, #F5F3DF 32.2%, #F1EAD1 39.68%, #EBDEBC 47.17%, #E3CEA1 53.15%, #D8B77A 60.64%, #C4A167 68.12%, #A07842 83.09%, #895F2C 95.06%, #815624 101.05%, #B18841 130.98%, #AA803B 145.95%, #FAE9B7 156.43%);
+  border-image-slice: 1;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  margin-bottom: -20px; /* increased protrusion */
+  padding-bottom: calc(14px + 20px);
+}
+
+/* Force all text and icons inside PMG column to brand red */
+.sec7-grid-row .sec7-grid-cell:nth-child(2) .cell-icon,
+.sec7-grid-row .sec7-grid-cell:nth-child(2) .cell-text {
+  color: #C1291F !important;
+}
+
+/* Icon container – vertical layout */
 .cell-icon {
   display: block;
   font-size: 24px;
@@ -2541,23 +2576,19 @@ section[id] {
   line-height: 1.3;
 }
 
-/* Icon colours */
-.icon-red-double { color: #C1291F; }      /* ◎ */
-.icon-green-single { color: #34A853; }    /* ◯ */
-.icon-yellow-triangle { color: #FBBC05; } /* △ */
-.icon-blue-cross { color: #155592; }      /* ✕ */
+/* Icon colours for competitor columns */
+.icon-red-double { color: #C1291F; }
+.icon-green-single { color: #34A853; }
+.icon-yellow-triangle { color: #FBBC05; }
+.icon-blue-cross { color: #155592; }
 
-/* For PMG column, override all icons to red (double circle) and text red */
-.sec7-pmg-cell .cell-icon {
-  color: #C1291F !important;
-}
-.sec7-pmg-cell .cell-text {
-  color: #C1291F !important;
-}
-
-/* Ensure competitor columns have proper text color */
-.sec7-comparison-table td:not(.sec7-pmg-cell):not(.sec7-row-label) .cell-text {
-  color: #333333;
+/* Small text in headers */
+.sec7-small-text {
+  font-size: 10px;
+  font-weight: normal;
+  display: block;
+  margin-top: 4px;
+  opacity: 0.9;
 }
 
 /* ----- Mobile Layout (max-width: 768px) ----- */
@@ -2565,84 +2596,79 @@ section[id] {
   .sec7-section {
     padding: 40px 16px;
   }
-  
   .sec7-cta-title {
     font-size: 20px;
   }
-  
   .sec7-cta-subtitle {
     font-size: 12px;
   }
-  
   .sec7-cta-buttons {
     flex-direction: column;
     gap: 12px;
     align-items: center;
   }
-  
   .sec7-btn-white,
   .sec7-btn-outline {
     width: 80%;
     max-width: 260px;
   }
-  
   .sec7-main-title {
     font-size: 22px;
   }
-  
   .sec7-sub-description {
     font-size: 12px;
     padding: 0 10px;
   }
-  
   .sec7-badge {
     padding: 3px 20px 3px 12px;
   }
-  
   .sec7-badge-text,
   .sec7-badge-text-red {
     font-size: 15px;
   }
-  
-  /* Make table cells slightly smaller on mobile */
-  .sec7-comparison-table th,
-  .sec7-comparison-table td {
+  .sec7-table-wrapper {
+    padding: 16px 0;
+  }
+  .sec7-grid-cell {
     padding: 10px 8px;
     font-size: 11px;
   }
-  
+  .sec7-header-row .sec7-grid-cell {
+    font-size: 12px;
+  }
   .sec7-row-label {
     font-size: 11px;
-    position: static;
-    left: 0;
-    background-color: #F9F9F9;
   }
-  
   .sec7-small-text {
     font-size: 8px;
   }
-  
-  .sec7-pmg-cell {
-    font-size: 11px;
+  /* Reduce protrusion on mobile slightly */
+  .sec7-header-row .sec7-grid-cell:nth-child(2) {
+    margin-top: -12px;
+    padding-top: calc(10px + 12px);
   }
+  .sec7-grid-row:last-child .sec7-grid-cell:nth-child(2) {
+    margin-bottom: -12px;
+    padding-bottom: calc(10px + 12px);
+  }
+
+  .sec7-row-label {
+  position: static;
+}
 }
 
-/* Tablet adjustments (769px - 1024px) */
+/* Tablet adjustments */
 @media (min-width: 769px) and (max-width: 1024px) {
   .sec7-container {
     max-width: 95%;
   }
-  
   .sec7-cta-title {
     font-size: 24px;
   }
-  
   .sec7-main-title {
     font-size: 26px;
   }
-  
-  .sec7-comparison-table th,
-  .sec7-comparison-table td {
+  .sec7-grid-cell {
     padding: 12px 10px;
     font-size: 12px;
   }
